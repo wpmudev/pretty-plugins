@@ -5,7 +5,7 @@ Plugin URI:
 Description: Adds ability to edit plugin details right from network admin plugins page + greatly improves look and functionality of plugins page for all sites in your network.
 Version: 0.997
 Network: true
-Author: Maniu(Incsub)
+Author: Maniu (Incsub)
 Author URI: http://premium.wpmudev.org/
 Text Domain: wmd_prettyplugins
 License: GPLv3 or later
@@ -329,7 +329,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		        'id'	=> 'edit_details',
 		        'title'	=> __('Editing Plugin Details', 'wmd_prettyplugins'),
 		        'content'	=> '
-		        	<p>'.sprintf(__( 'You can edit plugin details for each plugin by clicking "Edit details". All new details will be visible on <a href="%s">plugins page</a> available for all network sites. It is also possible to control aditional setting on <a href="%s">this site</a>.','wmd_prettyplugins'),  admin_url('admin.php?page=pretty-plugins.php'), admin_url('network/settings.php?page=pretty-plugins.php')).'</p>
+		        	<p>'.sprintf(__( 'You can edit plugin details for each plugin by clicking "Edit Details". All new details will be visible on <a href="%s">plugins page</a> available for all network sites. It is also possible to control aditional setting on <a href="%s">this site</a>.','wmd_prettyplugins'),  admin_url('admin.php?page=pretty-plugins.php'), admin_url('network/settings.php?page=pretty-plugins.php')).'</p>
 		        	<p>'.__( '<strong>Name</strong> - Content of this field will replace name of the plugin. Leave blank to use standard.','wmd_prettyplugins').'</p>
 		        	<p>'.__( '<strong>Custom URL</strong> - Content of this field will be used as plugin link.','wmd_prettyplugins').'</p>
 		        	<p>'.__( '<strong>Image URL</strong> - Content of this field will decide what image will be representing this plugin. You can choose image from gallery or type name of file located in "wp-content/uploads/prettyplugins/screenshots/". Alternatively, file with correct name will be autoloaded even when this field is empty (example: plugin location - "wp-content/plugins/akismet/akismet.php", image file - "akismet-akismet.png". Only PNG files will work in this method.). "Auto load screenshot with correct name" setting needs to be set to true for it to work. Recommended dimensions are 600px on 450px.','wmd_prettyplugins').'</p>
@@ -366,7 +366,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	}
 
 	function network_admin_page() {
-		add_submenu_page('settings.php', 'Pretty Plugins', 'PrettyPlugins', 'manage_network_options', basename($this->plugin_main_file), array($this,'network_option_page'));
+		add_submenu_page('settings.php', __( 'Pretty Plugins', 'wmd_prettyplugins' ), __( 'Pretty Plugins', 'wmd_prettyplugins' ), 'manage_network_options', basename($this->plugin_main_file), array($this,'network_option_page'));
 	}
 
 	function network_option_page() {

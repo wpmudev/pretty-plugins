@@ -2,7 +2,7 @@
 
 	<?php screen_icon('tools'); ?>
 	<h2><?php _e('Pretty Plugins', 'wmd_prettyplugins') ?></h2>
-	<p><?php printf(__('This page lets you control Pretty Plugins. You can configure custom plugin data for each plugin in <a href="%s">"Plugins" network page</a> by clicking "Edit details". PrettyPlugins will improve plugins page look for all sites in your network. <a href="%s">Here</a> you can see how it looks like for main site.', 'wmd_prettyplugins'), admin_url('network/plugins.php'), admin_url('admin.php?page=pretty-plugins.php')) ?></p>
+	<p><?php printf(__('This page lets you control Pretty Plugins. You can configure custom plugin data for each plugin in <a href="%s">"Plugins" network page</a> by clicking "Edit details". Pretty Plugins will improve plugins page look for all sites in your network. <a href="%s">Here</a> you can see how it looks like for main site.', 'wmd_prettyplugins'), admin_url('network/plugins.php'), admin_url('admin.php?page=pretty-plugins.php')) ?></p>
 	<form action="settings.php?page=pretty-plugins.php" method="post" enctype="multipart/form-data">
 
 		<?php
