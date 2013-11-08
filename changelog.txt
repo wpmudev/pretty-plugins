@@ -1,0 +1,7 @@
+Plugin Name: Pretty Plugins
+Author: Maniu (Incsub)
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial Release

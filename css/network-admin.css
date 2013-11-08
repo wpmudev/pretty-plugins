@@ -1,0 +1,30 @@
+table.plugins {
+	display: none;
+}
+.edit-category-save-button, .add-category-button {
+	margin: 0 0 0 5px !important;
+}
+.plugin-new-edit-category {
+	width: 100%;
+}
+.inline-edit-col label {
+	clear: both;
+}
+.inline-edit-row fieldset label span.title {
+	width: 9em;
+}
+.inline-edit-row fieldset label span.input-text-wrap {
+	margin-left: 9em;
+}
+.setting-disabled {
+	cursor: default;
+}
+.setting-disabled span.title {
+	color: #999;
+}
+.setting-disabled span.input-text-wrap input, .setting-disabled textarea {
+	background: #ededed;
+}
+.inline-edit-row fieldset label textarea.plugin_description {
+	height: 6.5em;
+}

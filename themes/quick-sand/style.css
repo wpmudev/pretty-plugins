@@ -1,0 +1,105 @@
+.plugins-categories {
+	padding: 0 !important;
+}
+.plugins-categories .theme-options {
+	display: block !important;
+}
+.plugins-categories li.active a {
+	color: #d54e21;
+}
+#adminmenu li.toplevel_page_pretty-plugins a.current .wp-menu-image img {
+	opacity: 1;
+}
+#availableplugins {
+	width: auto !important;
+	height: auto !important;
+}
+#availableplugins, #availableplugins td {
+	border-color: #ddd;
+}
+.available-plugin .themedetaildiv {
+	display: block;
+}
+#availableplugins .available-plugin img {
+	opacity: 0.9;
+	transition: all 0.4s ease-in-out;
+}
+.available-plugin-inner {
+	opacity: 0.8;
+	transition: all 0.4s ease-in-out;
+}
+#availableplugins .active-plugin .available-plugin-inner, .available-plugin:hover .available-plugin-inner, #availableplugins .active-plugin img, .available-plugin:hover img {
+	opacity: 1 !important;
+}
+#availableplugins .active-plugin .screenshot:hover img, #availableplugins .active-plugin .active img {
+	opacity: 0.9 !important;
+}
+
+.available-plugin {
+	padding: 20px 20px 0 0 !important;
+}
+.available-plugin .screenshot {
+	position: relative;
+}
+.available-plugin .screenshot .toggle {
+	position: absolute;
+	bottom: -30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #F2F9FC;
+	width: 100%;
+	transition: all 0.4s ease-in-out;
+	border-top:1px solid #ddd;
+	opacity: 0;
+}
+.active-plugin .screenshot .toggle {
+	background: #fcf7f7;
+}
+.available-plugin .screenshot .toggle h4 {
+	transition: all 0.2s ease-in-out;
+	margin: 0;
+}
+.available-plugin .screenshot:hover .toggle, .available-plugin .active .toggle {
+	bottom: 0px;
+	opacity: 1;
+}
+.available-plugin .active .toggle h4 {
+	color: #D54E21 !important;
+}
+.available-plugin .screenshot .ribbon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 60px;
+	width: 60px;
+}
+.available-plugin .action-links a.upgrade {
+	color:#ff0000;
+}
+#availableplugins .available-plugin .screenshot .ribbon img {
+	width: 60px;
+	height: 60px;
+	opacity: 0.8;
+}
+#plugin-categories-list {
+	margin-right: 20px;
+	text-transform: capitalize;
+}
+.plugin-options .type {
+	display: inline-block;
+}
+.plugin-options .sort {
+	white-space: nowrap;
+}
+.search-box span {
+margin-right: 10px;
+text-transform: uppercase;
+font-size: 11px;
+line-height: 18px;
+color: #999;
+}
+.plugin-search-input {
+	width:145px;
+	float: none !important;
+}

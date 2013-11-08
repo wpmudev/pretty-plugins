@@ -1,0 +1,703 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PrettyPlugins\n"
+"POT-Creation-Date: 2013-11-08 11:20+0100\n"
+"PO-Revision-Date: 2013-11-08 11:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: Incsub\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: C:\\Programs Portable\\xampp\\htdocs\\wordpress-edublogs"
+"\\wp-content\\plugins\\pretty-plugins\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\Programs Portable\\xampp\\htdocs\\wordpress-"
+"edublogs\\wp-content\\plugins\\pretty-plugins\n"
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:96
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:324
+msgid "Plugins"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:97
+msgid ""
+"Plugins lets you enable additional functionality on your site! Here is a "
+"list of what we have available for you."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:98
+msgid "Learn more"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:122
+#, php-format
+msgid ""
+"Pretty Plugins only works in multisite configuration. You can read more "
+"about it <a href=\"%s\" target=\"_blank\">here</a>. Plugin will be "
+"<strong>deactivated</strong>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:194
+msgid ""
+"You do not have sufficient permissions to activate plugins for this site."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:224
+msgid ""
+"You do not have sufficient permissions to deactivate plugins for this site."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:294
+msgid "Image"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:295
+msgid "Edit Code"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:296
+msgid "Show/hide orginal description"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:297
+msgid "Edit Details"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:298
+msgid "Edit plugin details like title, discription, image and categories"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:299
+msgid "Visit plugin help site"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:300
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:43
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:73
+msgid "Categories"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:301
+msgid "Choose image for plugin screenshot (recommended size: 300px on 225px)"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:302
+msgid "Select Image"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:303
+msgid "Edit"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:324
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:13
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:21
+msgid "All"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:337
+msgid "Editing Plugin Details"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:339
+#, php-format
+msgid ""
+"You can edit plugin details for each plugin by clicking \"Edit details\". "
+"All new details will be visible on <a href=\"%s\">plugins page</a> available "
+"for all network sites. It is also possible to control aditional setting on "
+"<a href=\"%s\">this site</a>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:340
+msgid ""
+"<strong>Name</strong> - Content of this field will replace name of the "
+"plugin. Leave blank to use standard."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:341
+msgid ""
+"<strong>Custom URL</strong> - Content of this field will be used as plugin "
+"link."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:342
+msgid ""
+"<strong>Image URL</strong> - Content of this field will decide what image "
+"will be representing this plugin. You can choose image from gallery or type "
+"name of file located in \"wp-content/uploads/prettyplugins/screenshots/\". "
+"Alternatively, file with correct name will be autoloaded even when this "
+"field is empty (example: plugin location - \"wp-content/plugins/akismet/"
+"akismet.php\", image file - \"akismet-akismet.png\". Only PNG files will "
+"work in this method.). \"Auto load screenshot with correct name\" setting "
+"needs to be set to true for it to work. Recommended dimensions are 600px on "
+"450px."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:343
+msgid ""
+"<strong>Categories</strong> - Allows to set categories that plugin will be "
+"assigned to. Unused categories by any plugins will be automatically deleted."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:344
+msgid ""
+"<strong>Description</strong> - Content of this field will replace "
+"description of the plugin. Leave blank to use standard."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:356
+msgid ""
+"Content of this field will replace name of the plugin. Leave blank to use "
+"standard."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:357
+msgid "Content of this field will be used as plugin link."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:358
+msgid ""
+"Content of this field will decide what image will be representing this "
+"plugin. Use help tab(top right corner) to get info about advanced usage."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:359
+msgid ""
+"Choose categories that plugin will be assigned to. Unused categories by any "
+"plugins will be automatically deleted."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:360
+msgid ""
+"Content of this field will replace description of the plugin. Leave blank to "
+"use standard."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:365
+#, php-format
+msgid ""
+"PrettyPlugins is now active! You can configure it <a href=\"%s\">here</a>, "
+"modify plugin details in <a href=\"%s\">network admin plugin page</a> and "
+"see how plugin page looks like for all network sites <a href=\"%s\">here</"
+"a>. <small><a style=\"color:red;\" href=\"%s\">(dismiss)</a></small>"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:369
+#, php-format
+msgid ""
+"Pretty Plugins is now in \"Setup Mode\". New plugin page will only be "
+"visible on main site. This message will disappear after disabling this mode. "
+"It can be done in Pretty Plugins <a href=\"%s\">settings page</a>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:376
+#, php-format
+msgid ""
+"As a Super Admin you can activate any plugins for this site. Please note "
+"that standard plugin page can still be accessed at <a href=\"%s\">this URL</"
+"a>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:394
+msgid "Successfully saved"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:399
+msgid "All custom plugin data deleted sucessfully."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:410
+msgid "There was a problem while uploading file."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:414
+msgid "Plugins data and settings imported successfully."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:547
+msgid "You do not have sufficient permissions to manage plugins for this site."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:574
+#, php-format
+msgid "Upgrade to %s!"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:583
+msgid "Deactivate"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:588
+msgid "Activate"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:595
+msgid "Free"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:597
+msgid "Pro Only"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:636
+msgid "You cannot delete an plugin while it is active on the main site."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:638
+#, php-format
+msgid ""
+"The plugin generated %d characters of <strong>unexpected output</strong> "
+"during activation. If you notice &#8220;headers already sent&#8221; "
+"messages, problems with syndication feeds or other issues, try deactivating "
+"or removing this plugin."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:640
+msgid ""
+"plugin could not be activated because it triggered a <strong>fatal error</"
+"strong>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:651
+msgid "Plugin <strong>activated</strong>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/pretty-plugins.php:653
+msgid "Plugin <strong>deactivated</strong>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/external/wpmudev-dash-notification.php:57
+#, php-format
+msgid ""
+"Easily get updates, support, and one-click WPMU DEV plugin/theme "
+"installations right from in your dashboard - <strong><a href=\"%s\" title="
+"\"Install Now &raquo;\">install the free WPMU DEV Dashboard plugin</a></"
+"strong>. &nbsp;&nbsp;&nbsp;<small><a href=\"http://premium.wpmudev.org/wpmu-"
+"dev/update-notifications-plugin-information/\">(find out more)</a></small>"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/external/wpmudev-dash-notification.php:61
+#, php-format
+msgid ""
+"Updates, Support, Premium Plugins, Community - <strong><a href=\"%s\" title="
+"\"Activate Now &raquo;\">activate the WPMU DEV Dashboard plugin now</a></"
+"strong>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/external/wpmudev-help-tooltips.php:296
+msgid "Help"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:8
+msgid "Edit Plugin Details"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:11
+msgid "Name"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:18
+msgid "Orginal Name"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:25
+msgid "Custom URL"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:30
+msgid "Image URL"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:34
+msgid "Choose Image"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:35
+msgid "Edit Image"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:53
+msgid "edit"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:74
+msgid "New category"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:75
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:82
+msgid "Edit category"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:81
+msgid "Add category"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:81
+msgid "Add"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:82
+msgid "Save"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:83
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:106
+msgid "Cancel"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:94
+msgid "Description"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:98
+msgid "Orginal Description"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:107
+msgid "Update"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/functions.php:25
+msgid "Custom"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/functions.php:25
+msgid "Standard"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:4
+msgid "PrettyPlugins"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:5
+#, php-format
+msgid ""
+"This page lets you control Pluglook. You can configure custom plugin data "
+"for each plugin in <a href=\"%s\">\"Plugins\" network page</a> by clicking "
+"\"Edit details\". PrettyPlugins will improve plugins page look for all sites "
+"in your network. <a href=\"%s\">Here</a> you can see how it looks like for "
+"main site."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:12
+msgid "General Settings"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:14
+msgid "Manage PrettyPlugins Options."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:20
+msgid "Enable Setup Mode:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:27
+msgid ""
+"When enabled, new plugin page will be visible only on main site. This mode "
+"is useful to configure plugin details before showing new plugin page for all "
+"network sites admin panel."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:33
+msgid "Select theme for plugin page:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:43
+msgid ""
+"Choose theme that you want to use to display your plugin page. You can add "
+"your own themes into \"wp-content/upload/prettyplugins/your-theme-/\" folder "
+"(Tip: duplicate one of ours from \"wp-content/plugins/prettyplugins/themes/"
+"\" to get you started)."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:49
+msgid "Theme Setting"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:50
+msgid "Adjust appearance and behavior for plugins page."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:56
+msgid "Select where plugin link points to:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:71
+msgid "Auto load first screenshot:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:78
+msgid ""
+"If image representing plugin has not been set, first available screenshot in "
+"plugin folder will be loaded(screenshot-1.png)."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:84
+msgid "Auto load screenshot with correct name:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:91
+msgid ""
+"If image representing plugin has not been set and image located in \"wp-"
+"content/upload/prettyplugins/screenshots/\" with correct name (example: "
+"plugin location - \"wp-content/plugins/akismet/akismet.php\", image file - "
+"\"akismet-akismet.png\".) exists, it will autoload. Only PNG files will work "
+"in this method"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:97
+msgid "Hide descriptions"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:104
+msgid ""
+"Plugin description will be hidden by default and it will appear after "
+"clicking special button."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:109
+msgid "Labels"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:110
+msgid "Manage Labels For Plugin Page."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:115
+msgid "Plugin Page Title:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:120
+msgid "This text will be visible as menu item and header for plugin page."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:125
+msgid "Plugin Page Description:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:130
+msgid "This text will be visible as description for plugins page."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:135
+msgid "Custom Link Label:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:140
+msgid "This text will link to plugin link for each of them."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:146
+msgid "Save Changes"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:149
+msgid "Tools"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:150
+msgid "Manage plugin data and settings."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:155
+msgid "Export:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:159
+msgid "Download Export File"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:161
+msgid ""
+"Export data and settings to import or use as config file. You can put "
+"exported file named \"config.xml\" into \"wp-content/upload/prettyplugins/\" "
+"folder for data and settings to autoload."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:161
+msgid ""
+"Keep in mind that data from current config file (if exists) will also be "
+"exported."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:168
+msgid "Import:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:173
+msgid "Upload file and import"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:174
+msgid ""
+"Choose proper XML file to import data and settings. This action will replace "
+"current data and settings if they already exists or add new ones."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:180
+msgid "Reset:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:184
+msgid "Are you sure?"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:184
+msgid "Delete all custom plugin data"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:186
+msgid "This action will delete all custom plugin data forever."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:8
+msgid "Start typing to search"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:11
+msgid "Choose plugins category to display:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:19
+msgid "Sort by:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:22
+msgid "Active"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:23
+msgid "Inactive"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:53
+msgid "Learn more about the plugin"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:59
+msgid "Details"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-edublogs\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:82
+msgid "No plugins found."
+msgstr ""
