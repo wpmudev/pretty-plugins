@@ -80,6 +80,17 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		$this->plugin_rel = dirname($this->plugin_basename).'/';
 
 		$wp_upload_dir = wp_upload_dir();
+		if($this->blog_id != 1)
+			foreach ($wp_upload_dir as $type => $value)
+				if($type == 'basedir' || $type == 'baseurl') {
+					$parts = explode('/', $value);
+					if(is_numeric(end($parts))) {
+						array_pop($parts);
+						array_pop($parts);
+						$wp_upload_dir[$type] = implode('/', $parts);
+					}
+				}
+
 		$this->plugin_dir_custom = $wp_upload_dir['basedir'].'/prettyplugins/';
 		$this->plugin_dir_url_custom = $wp_upload_dir['baseurl'].'/prettyplugins/';
 
