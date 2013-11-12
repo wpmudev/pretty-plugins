@@ -252,7 +252,6 @@ jQuery(document).ready(function() {
 		var code = event.keyCode || event.which;
 		if (code  == 13) {
 			event.preventDefault();
-			console.log(jQuery('.plugin-new-edit-category:focus').size());
 			if(jQuery('.plugin-new-edit-category:focus').size() == 1)
 			    jQuery('.category-button:visible').click();
 			else
