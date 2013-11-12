@@ -3,7 +3,7 @@
 Plugin Name: Pretty Plugins
 Plugin URI:
 Description: Adds ability to edit plugin details right from network admin plugins page + greatly improves look and functionality of plugins page for all sites in your network.
-Version: 0.997
+Version: 0.998
 Network: true
 Author: Maniu (Incsub)
 Author URI: http://premium.wpmudev.org/
@@ -59,6 +59,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				add_action('contextual_help', array($this,'network_plugins_help'), 10, 2);
 				add_action('network_admin_notices', array($this,'options_page_validate_save_notices'));
 				add_action('all_admin_notices', array($this,'plugin_page_notice'), 11);
+				add_filter('network_admin_plugin_action_links', array($this,'network_admin_plugin_action_links'), 10, 3);
 
 				add_action('admin_footer-plugins.php', array($this,'prettyplugins_edit_html'));
 
@@ -371,6 +372,21 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 	function network_option_page() {
 		include($this->plugin_dir.'includes/page-network-admin.php');
+	}
+
+	function network_admin_plugin_action_links($actions, $plugin_file, $plugin_data) {
+		//adds edit details link
+		if((isset($plugin_data['Network']) && !$plugin_data['Network']) || !isset($plugin_data['Network']))
+			array_splice($actions, 1, 0, '<a href="#'.$plugin_file.'" title="'.__('Edit plugin details like title, discription, image and categories', 'wmd_prettyplugins').'" class="edit_details">'.__('Edit Details', 'wmd_prettyplugins').'</a>');
+
+		//changes edit link to edit code for clarity
+		if(isset($actions['edit']))
+			$actions['edit'] = str_replace(__('Edit'), __( 'Edit Code', 'wmd_prettyplugins' ), $actions['edit']);
+
+		if($plugin_file == 'pretty-plugins/pretty-plugins.php')
+			$actions['settings'] = '<a href="'.admin_url('network/settings.php?page=pretty-plugins.php').'" title="'.__('Go to the Pretty Plugins settings page', 'wmd_prettyplugins').'">'.__('Settings', 'wmd_prettyplugins').'</a>';
+
+		return $actions;
 	}
 
 	function options_page_validate_save_notices() {

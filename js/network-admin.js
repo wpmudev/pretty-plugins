@@ -29,8 +29,6 @@ jQuery(document).ready(function() {
 				    plugin_column : plugin_plugin_column,
 				    description_column : plugin_description_column
 				};
-				plugin_plugin_column.find('div.row-actions-visible .activate, div.row-actions-visible .deactivate, div.row-actions .activate, div.row-actions .deactivate').after( '<span class="edit_details"><a href="#'+plugin_path+'" title="'+wmd_pl_na.edit_details_a_title+'" class="edit_details">'+wmd_pl_na.edit_details+'</a> | </span>' );
-				plugin_plugin_column.find('div.row-actions-visible .edit a, row-actions .edit a').text(wmd_pl_na.edit_code);
 				plugin_table.append( '<td class="column-image desc"><img class="plugin-image" width="100" height="75" src="'+wmd_pl_na.theme_url+'images/default_screenshot.png" alt="'+name+'"/></td>' );
 
 				prettyplugins_plugin_add_data(plugin_path);
@@ -247,6 +245,21 @@ jQuery(document).ready(function() {
 		}
 
 		return false;
+	});
+
+	//handle enter pressing while editing details
+	table.on( 'keyup keypress', '#plugin-edit', function(event) {
+		var code = event.keyCode || event.which;
+		if (code  == 13) {
+			event.preventDefault();
+			console.log(jQuery('.plugin-new-edit-category:focus').size());
+			if(jQuery('.plugin-new-edit-category:focus').size() == 1)
+			    jQuery('.category-button:visible').click();
+			else
+				jQuery('.plugin-save').click();
+
+			return false;
+		}
 	});
 
     var image_uploader;

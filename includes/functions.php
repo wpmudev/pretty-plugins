@@ -463,7 +463,7 @@ class WMD_PrettyPlugins_Functions {
 		$psts_plugins = $this->pro_site_settings['pp_plugins'];
 
 		if(isset($psts_plugins[$plugin_file]['level']) && $psts_plugins[$plugin_file]['level'] != 0 && is_numeric($psts_plugins[$plugin_file]['level']) && !is_super_admin())
-			if(function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level']))
+			if(function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level']) || psts_show_ads($this->blog_id))
 				return true;
 			else
 				return false;
@@ -484,44 +484,24 @@ class WMD_PrettyPlugins_Functions {
 }
 
 //Compatibility with older PHP
-if (!function_exists('array_replace_recursive'))
-{
-  function array_replace_recursive($array, $array1)
-  {
-    function recurse($array, $array1)
-    {
-      foreach ($array1 as $key => $value)
-      {
-        // create new key in $array, if it is empty or not an array
-        if (!isset($array[$key]) || (isset($array[$key]) && !is_array($array[$key])))
-        {
-          $array[$key] = array();
-        }
+if (!function_exists('array_replace_recursive')) {
+	function array_replace_recursive() {
+	    $arrays = func_get_args();
 
-        // overwrite the value in the base array
-        if (is_array($value))
-        {
-          $value = recurse($array[$key], $value);
-        }
-        $array[$key] = $value;
-      }
-      return $array;
-    }
+	    $original = array_shift($arrays);
 
-    // handle the arguments, merge one by one
-    $args = func_get_args();
-    $array = $args[0];
-    if (!is_array($array))
-    {
-      return $array;
-    }
-    for ($i = 1; $i < count($args); $i++)
-    {
-      if (is_array($args[$i]))
-      {
-        $array = recurse($array, $args[$i]);
-      }
-    }
-    return $array;
-  }
+	    foreach ($arrays as $array) {
+	        foreach ($array as $key => $value) {
+	            if (is_array($value)) {
+	                $original[$key] = array_replace_recursive($original[$key], $array[$key]);
+	            }
+
+	            else {
+	                $original[$key] = $value;
+	            }
+	        }
+	    }
+
+	    return $original;
+	}
 }

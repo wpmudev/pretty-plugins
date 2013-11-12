@@ -78,8 +78,8 @@
 					<input type="hidden" name="plugin_edit_category_key" class="plugin-edit-category-key" value="0">
 					<p><input type="text" name="plugin_new_edit_category" class="plugin-new-edit-category" value=""></p>
 
-					<a href="#" title="<?php _e('Add category', 'wmd_prettyplugins');?>" class="button-secondary add-category-button alignright target"><?php _e('Add', 'wmd_prettyplugins');?></a>
-					<a href="#" title="<?php _e('Edit category', 'wmd_prettyplugins');?>" class="button-secondary edit-category-save-button alignright target" style="display:none;"><?php _e('Save', 'wmd_prettyplugins');?> </a>
+					<a href="#" title="<?php _e('Add category', 'wmd_prettyplugins');?>" class="button-secondary category-button add-category-button alignright target"><?php _e('Add', 'wmd_prettyplugins');?></a>
+					<a href="#" title="<?php _e('Edit category', 'wmd_prettyplugins');?>" class="button-secondary category-button edit-category-save-button alignright target" style="display:none;"><?php _e('Save', 'wmd_prettyplugins');?> </a>
 					<a href="#" title="<?php _e('Cancel', 'wmd_prettyplugins');?>" class="button-secondary category-cancel-button alignright"><?php _e('Cancel', 'wmd_prettyplugins');?></a>
 
 					<span class="spinner spinner-add-category"></span>
