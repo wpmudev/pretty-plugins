@@ -2,8 +2,8 @@
 /*
 Plugin Name: Pretty Plugins
 Plugin URI:
-Description: Adds ability to edit plugin details right from network admin plugins page + greatly improves look and functionality of plugins page for all sites in your network.
-Version: 0.998
+Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
+Version: 1
 Network: true
 Author: Maniu (Incsub)
 Author URI: http://premium.wpmudev.org/
@@ -287,7 +287,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				if($plugin['Network'])
 					$network_only_plugins[] = $path;
 
-			$plugins_custom_data_ready = $this->get_converted_plugins_data_for_js($this->get_merged_plugin_custom_data());
+			$plugins_custom_data_ready = $this->get_converted_plugins_data_for_js($this->get_merged_plugins_custom_data());
 
 			$plugins_categories_ready = $this->get_merged_plugins_categories();
 			$protocol = isset( $_SERVER["HTTPS"] ) ? 'https://' : 'http://'; //This is used to set correct adress if secure protocol is used so ajax calls are working
@@ -341,12 +341,12 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		        'id'	=> 'edit_details',
 		        'title'	=> __('Editing Plugin Details', 'wmd_prettyplugins'),
 		        'content'	=> '
-		        	<p>'.sprintf(__( 'You can edit plugin details for each plugin by clicking "Edit Details". All new details will be visible on <a href="%s">plugins page</a> available for all network sites. It is also possible to control aditional setting on <a href="%s">this site</a>.','wmd_prettyplugins'),  admin_url('admin.php?page=pretty-plugins.php'), admin_url('network/settings.php?page=pretty-plugins.php')).'</p>
-		        	<p>'.__( '<strong>Name</strong> - Content of this field will replace name of the plugin. Leave blank to use standard.','wmd_prettyplugins').'</p>
-		        	<p>'.__( '<strong>Custom URL</strong> - Content of this field will be used as plugin link.','wmd_prettyplugins').'</p>
-		        	<p>'.__( '<strong>Image URL</strong> - Content of this field will decide what image will be representing this plugin. You can choose image from gallery or type name of file located in "wp-content/uploads/prettyplugins/screenshots/". Alternatively, file with correct name will be autoloaded even when this field is empty (example: plugin location - "wp-content/plugins/akismet/akismet.php", image file - "akismet-akismet.png". Only PNG files will work in this method.). "Auto load screenshot with correct name" setting needs to be set to true for it to work. Recommended dimensions are 600px on 450px.','wmd_prettyplugins').'</p>
-		        	<p>'.__( '<strong>Categories</strong> - Allows to set categories that plugin will be assigned to. Unused categories by any plugins will be automatically deleted.','wmd_prettyplugins').'</p>
-		        	<p>'.__( '<strong>Description</strong> - Content of this field will replace description of the plugin. Leave blank to use standard.','wmd_prettyplugins').'</p>
+		        	<p>'.sprintf(__( 'You can edit plugin details for each plugin by clicking "Edit Details". All new details will be visible on <a href="%s">the plugins page</a> available for all network sites. It is also possible to control aditional settings on <a href="%s">this site</a>.','wmd_prettyplugins'),  admin_url('admin.php?page=pretty-plugins.php'), admin_url('network/settings.php?page=pretty-plugins.php')).'</p>
+		        	<p>'.__( '<strong>Name</strong> - Replace the name of the plugin with one of your choice. Leave blank to use the original name.','wmd_prettyplugins').'</p>
+		        	<p>'.__( '<strong>Custom URL</strong> - Create an external plugin link to any URL of your choice, for support documentation for example.','wmd_prettyplugins').'</p>
+		        	<p>'.__( '<strong>Image URL</strong> - Set the featured image for this plugin. You can choose an image from your media gallery or copy the URL of the file located in "wp-content/uploads/prettyplugins/screenshots/". Alternatively, a file with the correct name will be autoloaded even when this field is empty (example: plugin location - "wp-content/plugins/akismet/akismet.php", image file - "akismet-akismet.png". Only PNG files will work with this method.). "Auto load screenshot with correct name" setting needs to be set to true for it to work. Recommended dimensions are 600px on 450px.','wmd_prettyplugins').'</p>
+		        	<p>'.__( '<strong>Categories</strong> - Allows you to set categories that the plugin will be assigned to. Unused categories will be automatically deleted.','wmd_prettyplugins').'</p>
+		        	<p>'.__( '<strong>Description</strong> - Replace the original description of the plugin with your own. Leave blank to use the original.','wmd_prettyplugins').'</p>
 		        ',
 		    ) );
 
@@ -358,11 +358,11 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$tips->set_icon_url($this->plugin_dir_url.'images/tooltip.png');
 			$tips->set_use_notice(false);
 
-			$tips->bind_tip(__('Content of this field will replace name of the plugin. Leave blank to use standard.', 'wmd_prettyplugins'), '#name_tooltip');
-			$tips->bind_tip(__('Content of this field will be used as plugin link.', 'wmd_prettyplugins'), '#custom_url_tooltip');
-			$tips->bind_tip(__('Content of this field will decide what image will be representing this plugin. Use help tab(top right corner) to get info about advanced usage.', 'wmd_prettyplugins'), '#image_url_tooltip');
-			$tips->bind_tip(__('Choose categories that plugin will be assigned to. Unused categories by any plugins will be automatically deleted.', 'wmd_prettyplugins'), '#categories_tooltip');
-			$tips->bind_tip(__('Content of this field will replace description of the plugin. Leave blank to use standard.', 'wmd_prettyplugins'), '#description_tooltip');
+			$tips->bind_tip(__('Replace the name of the plugin with one of your choice. Leave blank to use the original name.', 'wmd_prettyplugins'), '#name_tooltip');
+			$tips->bind_tip(__('Create an external plugin link to any URL of your choice, for support documentation for example.', 'wmd_prettyplugins'), '#custom_url_tooltip');
+			$tips->bind_tip(__('Set the featured image for this plugin. Recommended dimensions are 600px on 450px. Use help tab (top right corner) to get info about advanced usage.', 'wmd_prettyplugins'), '#image_url_tooltip');
+			$tips->bind_tip(__('Allows you to set categories that the plugin will be assigned to. Unused categories will be automatically deleted.', 'wmd_prettyplugins'), '#categories_tooltip');
+			$tips->bind_tip(__('Replace the original description of the plugin with your own. Leave blank to use the original.', 'wmd_prettyplugins'), '#description_tooltip');
 		}
 	}
 
@@ -545,7 +545,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			if(isset($update_categories))
 				update_site_option('wmd_prettyplugins_plugins_categories', $this->plugins_categories);
 
-			$plugins_custom_data_ready = $this->get_converted_plugins_data_for_js($this->get_merged_plugin_custom_data());
+			$plugins_custom_data_ready = $this->get_converted_plugins_data_for_js($this->get_merged_plugins_custom_data());
 			if(empty($plugins_custom_data_ready[$_POST['plugin_path']]))
 				$error = 1;
 
@@ -568,7 +568,15 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 		$plugins_categories = $this->get_merged_plugins_categories();
 
-		$plugins_orginal = array_replace_recursive(apply_filters('all_plugins', get_plugins()), $this->get_merged_plugin_custom_data());
+		$plugins_default_data = apply_filters('all_plugins', get_plugins());
+		$plugins_custom_data = $this->get_merged_plugins_custom_data();
+		//remove data for plugins that are not allowed by prosites
+		if($this->pro_site_plugin_active)
+			foreach ($plugins_custom_data as $key => $data)
+				if(!array_key_exists($key, $plugins_default_data))
+					unset($plugins_custom_data[$key]);
+
+		$plugins_orginal = array_replace_recursive($plugins_default_data, $plugins_custom_data);
 
 		$count = 0;
 		$plugins = array();

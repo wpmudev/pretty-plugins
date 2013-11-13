@@ -135,7 +135,7 @@ class WMD_PrettyPlugins_Functions {
 		return $categories;
 	}
 
-	function get_merged_plugin_custom_data() {
+	function get_merged_plugins_custom_data() {
 		if(!isset($this->plugins_custom_data_config) || !is_array($this->plugins_custom_data_config))
 			$this->plugins_custom_data_config = array();
 		if(!isset($this->plugins_custom_data) || !is_array($this->plugins_custom_data))
@@ -405,7 +405,7 @@ class WMD_PrettyPlugins_Functions {
 			$plugins_categories_xml = array_merge($plugins_categories_config_ready, $this->plugins_categories);
 
 			$plugins_custom_data_xml = array();
-			foreach ($this->get_merged_plugin_custom_data() as $path => $value) {
+			foreach ($this->get_merged_plugins_custom_data() as $path => $value) {
 				//replace plugins categories keys to match new ones(without config in name)
 				if(isset($value['Categories']) && $plugins_categories_replace) {
 					$new_categories = array();
@@ -461,9 +461,8 @@ class WMD_PrettyPlugins_Functions {
 
 	function prosite_plugin_available($plugin_file) {
 		$psts_plugins = $this->pro_site_settings['pp_plugins'];
-
 		if(isset($psts_plugins[$plugin_file]['level']) && $psts_plugins[$plugin_file]['level'] != 0 && is_numeric($psts_plugins[$plugin_file]['level']) && !is_super_admin())
-			if(function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level']) || psts_show_ads($this->blog_id))
+			if(function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level']) || !psts_show_ads($this->blog_id))
 				return true;
 			else
 				return false;
