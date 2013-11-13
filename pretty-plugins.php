@@ -659,7 +659,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$plugins[$plugin_path] = $plugin_prepare;
 		}
 
-		usort($plugins, array($this,'compare_by_name'));
+		uasort($plugins, array($this,'compare_by_name'));
 		?>
 		<?php if ( isset($_GET['error']) ) :
 

@@ -246,7 +246,7 @@ class WMD_PrettyPlugins_Functions {
 
 	//used to sort plugins by name
 	function compare_by_name($a, $b) {
-		return strcmp($a["Name"], $b["Name"]);
+		return strtolower($a['Name']) > strtolower($b['Name']);
 	}
 
 	function the_select_options($array, $current) {
