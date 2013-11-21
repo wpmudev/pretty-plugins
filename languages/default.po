@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PrettyPlugins\n"
-"POT-Creation-Date: 2013-11-13 21:40+0100\n"
-"PO-Revision-Date: 2013-11-13 21:40+0100\n"
+"POT-Creation-Date: 2013-11-15 08:48+0100\n"
+"PO-Revision-Date: 2013-11-15 08:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: Incsub\n"
 "Language: English\n"
@@ -615,9 +615,9 @@ msgstr ""
 #: C:\Programs
 #: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:155
 msgid ""
-"Export data and settings to import or use as config file. You can put "
-"exported file named \"config.xml\" into \"wp-content/upload/prettyplugins/\" "
-"folder for data and settings to autoload."
+"Export data and settings for later import or use as a configuration file. "
+"You can put exported file named \"config.xml\" into \"wp-content/upload/"
+"prettyplugins/\" folder to autoload data and settings."
 msgstr ""
 
 #: C:\Programs
@@ -640,8 +640,8 @@ msgstr ""
 #: C:\Programs
 #: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:168
 msgid ""
-"Choose proper XML file to import data and settings. This action will replace "
-"current data and settings if they already exists or add new ones."
+"Choose an export file (correctly formatted XML file) to import data and "
+"settings. This action will replace any existing data and settings."
 msgstr ""
 
 #: C:\Programs
@@ -661,7 +661,7 @@ msgstr ""
 
 #: C:\Programs
 #: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:180
-msgid "This action will delete all custom plugin data forever."
+msgid "This action will permanently delete all existing custom plugin data."
 msgstr ""
 
 #: C:\Programs

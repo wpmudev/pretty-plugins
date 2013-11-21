@@ -1,14 +1,30 @@
 <?php
 /*
 Plugin Name: Pretty Plugins
-Plugin URI:
+Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
 Version: 1
 Network: true
 Author: Maniu (Incsub)
 Author URI: http://premium.wpmudev.org/
-Text Domain: wmd_prettyplugins
-License: GPLv3 or later
+WDP ID: 852474
+*/
+
+/*
+Copyright Incsub (http://incsub.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
+the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 define( 'PLUGLOOK_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
