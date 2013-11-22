@@ -707,5 +707,6 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 global $wmd_prettyplugins;
 $wmd_prettyplugins = new WMD_PrettyPlugins;
 
-if (!class_exists('WPMUDEV_Dashboard_Notice'))
-	include_once(PLUGLOOK_PLUGIN_DIR.'external/wpmudev-dash-notification.php');
+global $wpmudev_notices;
+$wpmudev_notices[] = array( 'id'=> 852474, 'name'=> 'Pretty Plugins', 'screens' => array( 'toplevel_page_pretty-plugins', 'settings_page_pretty-plugins-network' ) );
+include_once(PLUGLOOK_PLUGIN_DIR.'external/dash-notice/wpmudev-dash-notification.php');
