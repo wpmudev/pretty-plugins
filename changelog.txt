@@ -3,5 +3,9 @@ Author: Maniu (Incsub)
 
 == Changelog ==
 
+= 1.0.1 =
+* Added MP6 support
+* Fixed backslash problem for text in settings
+
 = 1.0.0 =
 * Initial Release

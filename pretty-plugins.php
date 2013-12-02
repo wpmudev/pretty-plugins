@@ -3,7 +3,7 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1
+Version: 1.0.1
 Network: true
 Author: Maniu (Incsub)
 Author URI: http://premium.wpmudev.org/
@@ -52,9 +52,14 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 	var $default_options;
 	var $options;
-	var $current_theme_path;
+	var $current_theme_details;
 
 	function __construct() {
+		//loads dashboard stuff
+		global $wpmudev_notices;
+		$wpmudev_notices[] = array( 'id'=> 852474, 'name'=> 'Pretty Plugins', 'screens' => array( 'toplevel_page_pretty-plugins', 'settings_page_pretty-plugins-network' ) );
+		include_once(PLUGLOOK_PLUGIN_DIR.'external/dash-notice/wpmudev-dash-notification.php');
+
 		//plugin only works on admin
 		if(is_admin()) {
 			$this->init_vars();
@@ -157,7 +162,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		//load stuff when on correct page
 		if($this->is_prettyplugin_data_required()) {
 			$this->plugins_custom_data = get_site_option('wmd_prettyplugins_plugins_custom_data', array());
-			$this->current_theme_path = $this->get_current_theme_path();
+			$this->current_theme_details = $this->get_current_theme_details();
 		}
 
 		//we need categories also on all admin pages because it is used in menu
@@ -271,12 +276,14 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	}
 
 	function register_scripts_styles_admin($hook) {
+		global $wp_version;
+
 		//register scripts and styles for plugin page
 		if( $hook == 'toplevel_page_pretty-plugins' ) {
-			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_path['dir_url'].'style.css');
+			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'style.css');
 			wp_enqueue_style('wmd-prettyplugins-theme');
 
-			wp_register_script('wmd-prettyplugins-theme', $this->current_theme_path['dir_url'].'theme.js', array('jquery'), false, true);
+			wp_register_script('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'theme.js', array('jquery'), false, true);
 			wp_enqueue_script('wmd-prettyplugins-theme');
 
 			if(isset($_REQUEST['category']))
@@ -311,7 +318,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				'ajax_url' => admin_url( 'admin-ajax.php', $protocol ),
 				'admin_url' => admin_url( '', $protocol ),
 				'prettyplugins_url' => $this->plugin_dir_url,
-				'theme_url' => $this->current_theme_path['dir_url'],
+				'theme_url' => $this->current_theme_details['dir_url'],
 				'image' => __('Image', 'wmd_prettyplugins'),
 				'edit_code' => __('Edit Code', 'wmd_prettyplugins'),
 				'orginal_description' => __('Show/hide orginal description', 'wmd_prettyplugins'),
@@ -330,12 +337,18 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 			wp_enqueue_media();
 		}
+
+        //mp6 icon load
+        if ( $wp_version >= 3.8 ) {
+            wp_register_style( 'wmd-prettyplugins-mp6', $this->plugin_dir_url . 'css/mp6.css');
+            wp_enqueue_style('wmd-prettyplugins-mp6');
+        }
 	}
 
 	//Replaces plugins page with custom
 	function admin_page() {
 		remove_menu_page('plugins.php');
-		add_menu_page($this->options['plugins_page_title'], $this->options['plugins_page_title'], 'activate_plugins', basename($this->plugin_main_file), array($this,'new_plugin_page'), $this->plugin_dir_url.'/images/icon.png', 65);
+		add_menu_page(stripslashes($this->options['plugins_page_title']), stripslashes($this->options['plugins_page_title']), 'activate_plugins', basename($this->plugin_main_file), array($this,'new_plugin_page'), $this->plugin_dir_url.'/images/icon.png', 65);
 
 		if($this->pro_site_plugin_active) {
 			remove_submenu_page('psts-checkout', 'premium-plugins');
@@ -636,12 +649,12 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 			//set up ribbon
 			if($plugin_prepare['isActive'])
-				$plugin_prepare['Ribbon'] = '<div class="ribbon"><img src="'.$this->current_theme_path['dir_url'].'images/ribbon_active.png'.'" alt="'.__('Active', 'wmd_prettyplugins').'"></div>';
+				$plugin_prepare['Ribbon'] = '<div class="ribbon"><img src="'.$this->current_theme_details['dir_url'].'images/ribbon_active.png'.'" alt="'.__('Active', 'wmd_prettyplugins').'"></div>';
 			elseif($this->pro_site_plugin_active)
 				if($plugin_prepare['isAvailable'])
-					$plugin_prepare['Ribbon'] = '<div class="ribbon"><img src="'.$this->current_theme_path['dir_url'].'images/ribbon_available.png'.'" alt="'.__('Free', 'wmd_prettyplugins').'"></div>';
+					$plugin_prepare['Ribbon'] = '<div class="ribbon"><img src="'.$this->current_theme_details['dir_url'].'images/ribbon_available.png'.'" alt="'.__('Free', 'wmd_prettyplugins').'"></div>';
 				else
-					$plugin_prepare['Ribbon'] = '<div class="ribbon"><img src="'.$this->current_theme_path['dir_url'].'images/ribbon_upgrade.png'.'" alt="'.__('Pro Only', 'wmd_prettyplugins').'"></div>';
+					$plugin_prepare['Ribbon'] = '<div class="ribbon"><img src="'.$this->current_theme_details['dir_url'].'images/ribbon_upgrade.png'.'" alt="'.__('Pro Only', 'wmd_prettyplugins').'"></div>';
 			else
 				$plugin_prepare['Ribbon'] = '';
 
@@ -700,13 +713,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			<div id="message" class="updated"><p><?php _e('Plugin <strong>deactivated</strong>.') ?></p></div>
 		<?php endif;
 
-		include($this->current_theme_path['dir'].'index.php');
+		include($this->current_theme_details['dir'].'index.php');
 	}
 }
 
 global $wmd_prettyplugins;
 $wmd_prettyplugins = new WMD_PrettyPlugins;
-
-global $wpmudev_notices;
-$wpmudev_notices[] = array( 'id'=> 852474, 'name'=> 'Pretty Plugins', 'screens' => array( 'toplevel_page_pretty-plugins', 'settings_page_pretty-plugins-network' ) );
-include_once(PLUGLOOK_PLUGIN_DIR.'external/dash-notice/wpmudev-dash-notification.php');

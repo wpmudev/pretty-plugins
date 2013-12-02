@@ -58,16 +58,18 @@ class WMD_PrettyPlugins_Functions {
 		return $themes;
     }
 
-    function get_current_theme_path() {
+    function get_current_theme_details() {
     	$theme = array('url' => '', 'dir' => '');
     	$theme_details = explode('/', $this->options['theme']);
     	if($theme_details[0] == 'standard') {
     		$theme['dir_url'] = $this->plugin_dir_url.'themes/'.$theme_details[1].'/';
     		$theme['dir'] = $this->plugin_dir.'themes/'.$theme_details[1].'/';
+    		$theme['type'] = 'standard';
     	}
     	elseif($theme_details[0] == 'custom' && !empty($this->plugin_dir_url_custom)) {
     		$theme['dir_url'] = $this->plugin_dir_url_custom.'themes/'.$theme_details[1].'/';
     		$theme['dir'] = $this->plugin_dir_custom.'themes/'.$theme_details[1].'/';
+    		$theme['type'] = 'custom';
     	}
 
     	return $theme;
@@ -82,8 +84,13 @@ class WMD_PrettyPlugins_Functions {
 			$screenshot_value = $this->plugin_dir_url_custom.'screenshots/'.$plugin_path_slug.'.png';
 		elseif(empty($screenshot_value) && $this->options['plugins_auto_screenshots'] && file_exists(plugin_dir_path(WP_PLUGIN_DIR.'/'.$plugin_path).'screenshot-1.png'))
 			$screenshot_value = plugins_url('screenshot-1.png', $plugin_path);
-		elseif($get_default && (empty($screenshot_value) || (!empty($screenshot_value) && count(explode('/', $screenshot_value)) == 1 && !file_exists($this->plugin_dir_custom.'screenshots/'.$screenshot_value))))
-			$screenshot_value = $this->current_theme_path['dir_url'].'images/default_screenshot.png';
+		elseif($get_default && (empty($screenshot_value) || (!empty($screenshot_value) && count(explode('/', $screenshot_value)) == 1 && !file_exists($this->plugin_dir_custom.'screenshots/'.$screenshot_value)))) {
+			global $wp_version;
+			if($wp_version < 3.8 && $this->current_theme_details['type'] == 'standard' )
+				$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot_classic.png';
+			else
+				$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot.png';
+		}
 
     	return $screenshot_value;
     }

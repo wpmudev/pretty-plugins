@@ -111,7 +111,7 @@
 				</th>
 
 				<td>
-					<input type="text" class="regular-text" name="wmd_prettyplugins_options[plugins_page_title]" value="<?php echo esc_attr($this->options['plugins_page_title']); ?>"/>
+					<input type="text" class="regular-text" name="wmd_prettyplugins_options[plugins_page_title]" value="<?php echo stripslashes(esc_attr($this->options['plugins_page_title'])); ?>"/>
 					<p class="description"><?php _e('This is what you call the "Plugins" menu item. Call it "Plugins", "Apps", "Add-ons" or whatever you\'d like.', 'wmd_prettyplugins') ?></p>
 				</td>
 			</tr>
@@ -121,7 +121,7 @@
 				</th>
 
 				<td>
-					<input type="text" class="regular-text" style="width:95%;" name="wmd_prettyplugins_options[plugins_page_description]" value="<?php echo esc_attr($this->options['plugins_page_description']); ?>"/>
+					<input type="text" class="regular-text" style="width:95%;" name="wmd_prettyplugins_options[plugins_page_description]" value="<?php echo stripslashes(esc_attr($this->options['plugins_page_description'])); ?>"/>
 					<p class="description"><?php _e('This text will be visible at the top of the plugins page. Tell your users what you have to offer.', 'wmd_prettyplugins') ?></p>
 				</td>
 			</tr>
@@ -131,7 +131,7 @@
 				</th>
 
 				<td>
-					<input type="text" class="regular-text" name="wmd_prettyplugins_options[plugins_link_label]" value="<?php echo esc_attr($this->options['plugins_link_label']); ?>"/>
+					<input type="text" class="regular-text" name="wmd_prettyplugins_options[plugins_link_label]" value="<?php echo stripslashes(esc_attr($this->options['plugins_link_label'])); ?>"/>
 					<p class="description"><?php _e('Add a link to any URL for each plugin. For example, a link to support documents for the plugin.', 'wmd_prettyplugins') ?></p>
 				</td>
 			</tr>

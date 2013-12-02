@@ -1,7 +1,7 @@
 <div class="wrap">
 	<?php screen_icon('plugins'); ?>
-	<h2><?php echo $this->options['plugins_page_title']; ?></h2>
-	<p><?php echo $this->options['plugins_page_description']; ?></p>
+	<h2><?php echo stripslashes($this->options['plugins_page_title']); ?></h2>
+	<p><?php echo stripslashes($this->options['plugins_page_description']); ?></p>
 
 	<div id="current-theme" class="plugins-categories">
 		<p class="search-box">
@@ -55,7 +55,7 @@
 
 						<?php if(isset($plugin['PluginLink'])) { ?>
 							<li>
-								<a href="<?php echo $plugin['PluginLink']; ?>" target="_blank" title="<?php _e('Learn more about the plugin', 'wmd_prettyplugins') ?>"><?php echo $this->options['plugins_link_label']; ?></a>
+								<a href="<?php echo $plugin['PluginLink']; ?>" target="_blank" title="<?php _e('Learn more about the plugin', 'wmd_prettyplugins') ?>"><?php echo stripslashes($this->options['plugins_link_label']); ?></a>
 							</li>
 						<?php } ?>
 
