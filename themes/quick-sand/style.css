@@ -3,6 +3,41 @@
 }
 .plugins-categories .theme-options {
 	display: block !important;
+	overflow: hidden;
+	font-size: 14px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+.theme-options span {
+	float: left;
+	margin-right: 10px;
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 22px;
+	color: #999;
+}
+.theme-options li {
+	float: left;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px solid #dfdfdf;
+}
+.theme-options li:last-child {
+	padding-right: 0;
+	margin-right: 0;
+	border-right: 0;
+}
+.action-links li {
+	float: left;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px solid #dfdfdf;
+}
+.theme-options ul {
+	float: left;
+	margin: 0;
 }
 .plugins-categories li.active a {
 	color: #d54e21;

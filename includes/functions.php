@@ -92,7 +92,7 @@ class WMD_PrettyPlugins_Functions {
 				$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot.png';
 		}
 
-    	return $screenshot_value;
+    	return (is_ssl()) ? str_replace('http://', 'https://', $screenshot_value) : $screenshot_value;
     }
 
 	function get_resized_attachment_url($attachment_id, $width = '600', $height = '450', $crop = true, $suffix = "-plugin-screenshot") {
@@ -469,7 +469,7 @@ class WMD_PrettyPlugins_Functions {
 	function prosite_plugin_available($plugin_file) {
 		$psts_plugins = $this->pro_site_settings['pp_plugins'];
 		if(isset($psts_plugins[$plugin_file]['level']) && $psts_plugins[$plugin_file]['level'] != 0 && is_numeric($psts_plugins[$plugin_file]['level']) && !is_super_admin())
-			if(function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level']) || !psts_show_ads($this->blog_id))
+			if((function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level'])))
 				return true;
 			else
 				return false;

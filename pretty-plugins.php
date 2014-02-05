@@ -3,9 +3,9 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1.0.1
+Version: 1.0.2
 Network: true
-Author: Maniu (Incsub)
+Author: WPMUDEV
 Author URI: http://premium.wpmudev.org/
 WDP ID: 852474
 */
@@ -297,7 +297,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			wp_localize_script( 'wmd-prettyplugins-theme', 'wmd_pl_a', $params );
 		}
 		//register scripts and styles for network plugin page
-		elseif($hook == 'plugins.php' && is_network_admin()) {
+		elseif($hook == 'plugins.php' && is_network_admin() && (!isset($_GET['plugin_status']) || (isset($_GET['plugin_status']) && $_GET['plugin_status'] != 'mustuse' && $_GET['plugin_status'] != 'dropins'))) {
 			wp_register_style('wmd-prettyplugins-network-admin', $this->plugin_dir_url.'css/network-admin.css');
 			wp_enqueue_style('wmd-prettyplugins-network-admin');
 
@@ -416,7 +416,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 	function network_admin_plugin_action_links($actions, $plugin_file, $plugin_data) {
 		//adds edit details link
-		if((isset($plugin_data['Network']) && !$plugin_data['Network']) || !isset($plugin_data['Network']))
+		if(((isset($plugin_data['Network']) && !$plugin_data['Network']) || !isset($plugin_data['Network'])) && (!isset($_GET['plugin_status']) || (isset($_GET['plugin_status']) && $_GET['plugin_status'] != 'mustuse' && $_GET['plugin_status'] != 'dropins')))
 			array_splice($actions, 1, 0, '<a href="#'.$plugin_file.'" title="'.__('Edit plugin details like title, discription, image and categories', 'wmd_prettyplugins').'" class="edit_details">'.__('Edit Details', 'wmd_prettyplugins').'</a>');
 
 		//changes edit link to edit code for clarity

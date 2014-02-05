@@ -1,7 +1,14 @@
 Plugin Name: Pretty Plugins
-Author: Maniu (Incsub)
+Author: WPMUDEV
+Lead developer: Maniu
 
 == Changelog ==
+
+= 1.0.2 =
+* Fixed links path when using SSL
+* Fixed styling problems
+* Fixed edit settings appearing for different plugin types then standard
+* Fixed incomparability with Prosites advertisements module that allowed activation of not allowed plugins
 
 = 1.0.1 =
 * Added MP6 support
