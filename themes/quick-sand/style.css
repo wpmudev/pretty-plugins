@@ -45,6 +45,52 @@
 #adminmenu li.toplevel_page_pretty-plugins a.current .wp-menu-image img {
 	opacity: 1;
 }
+.available-theme {
+	display: inline-block;
+	margin-right: 10px;
+	overflow: hidden;
+	padding: 20px 20px 20px 0;
+	vertical-align: top;
+	width: 300px;
+}
+.available-theme h3 {
+	margin: 15px 0 0;
+}
+.available-theme .action-links {
+	margin-top: 10px;
+	overflow: hidden;
+}
+div.action-links {
+	font-weight: 400;
+	margin: 6px 0 0;
+}
+.available-plugin .themedetaildiv {
+	display: block;
+}
+.available-theme a.screenshot {
+	background-color: #fff;
+	border-color: #ccc;
+}
+.available-plugin .screenshot {
+	width: 300px;
+	height: 225px;
+	display: block;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.available-theme .action-links li {
+	float: left;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px solid #dfdfdf;
+}
+.available-theme .action-links li:last-child {
+	padding-right: 0;
+	margin-right: 0;
+	border-right: 0;
+}
 #availableplugins {
 	width: auto !important;
 	height: auto !important;

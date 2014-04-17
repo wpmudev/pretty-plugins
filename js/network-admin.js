@@ -353,7 +353,7 @@ function prettyplugins_plugin_add_data(plugin_path) {
 			if(plugin_custom_url.length)
 				plugin_custom_url.attr('href', plugin_details.custom_url);
 			else
-				plugin.description_column.find('.plugin-version-author-uri').append( '<span class="plugin-help-holder"> | <a class="plugin-help-url" href="'+plugin_details.custom_url+'" title="'+wmd_pl_na.visit_help+'">'+wmd_pl_na.visit_help+'</a></span>' );
+				plugin.description_column.find('.plugin-version-author-uri:not(.plugin-categories-holder)').append( '<span class="plugin-help-holder"> | <a class="plugin-help-url" href="'+plugin_details.custom_url+'" title="'+wmd_pl_na.visit_help+'">'+wmd_pl_na.visit_help+'</a></span>' );
 		}
 		else
 			plugin.description_column.find('.plugin-help-holder').remove();

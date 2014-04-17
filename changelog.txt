@@ -4,6 +4,9 @@ Lead developer: Maniu
 
 == Changelog ==
 
+= 1.0.3 =
+* Added compatibility with WordPress 3.9
+
 = 1.0.2 =
 * Fixed links path when using SSL
 * Fixed styling problems

@@ -46,7 +46,7 @@
  * E.g. for adding tooltips in a plugin add-on.
  */
 
-class WpmuDev_HelpTooltips {
+class WpmuDev_HelpTooltipsDyn {
 
 	/**
 	 * Holds an array of inline tips: used as dependency inclusion switch.

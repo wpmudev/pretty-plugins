@@ -3,8 +3,9 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1.0.2
+Version: 1.0.3
 Network: true
+Text Domain: wmd_prettyplugins
 Author: WPMUDEV
 Author URI: http://premium.wpmudev.org/
 WDP ID: 852474
@@ -280,7 +281,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 		//register scripts and styles for plugin page
 		if( $hook == 'toplevel_page_pretty-plugins' ) {
-			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'style.css');
+			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'style.css', array(), '1.1');
 			wp_enqueue_style('wmd-prettyplugins-theme');
 
 			wp_register_script('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'theme.js', array('jquery'), false, true);
@@ -381,9 +382,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 
 			//load tooltips for admin plugins page
-			if(!class_exists('WpmuDev_HelpTooltips'))
+			if(!class_exists('WpmuDev_HelpTooltipsDyn'))
 				include($this->plugin_dir.'external/wpmudev-help-tooltips.php');
-			$tips = new WpmuDev_HelpTooltips();
+			$tips = new WpmuDev_HelpTooltipsDyn();
 			$tips->set_icon_url($this->plugin_dir_url.'images/tooltip.png');
 			$tips->set_use_notice(false);
 
@@ -557,7 +558,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 			//adds http to custom link
 			if(isset($this->plugins_custom_data[$_POST['plugin_path']]['CustomLink']))
-				if (strpos($this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'], '://') === false)
+				if (strpos($this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'], '://') === false  && count(explode('/', $this->themes_custom_data[$_POST['plugin_path']]['CustomLink'])) > 1)
 					$this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'] = 'http://'.$this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'];
 
 			//remove unused and categories if necessary
@@ -599,11 +600,11 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 		$plugins_default_data = apply_filters('all_plugins', get_plugins());
 		$plugins_custom_data = $this->get_merged_plugins_custom_data();
-		//remove data for plugins that are not allowed by prosites
-		if($this->pro_site_plugin_active)
-			foreach ($plugins_custom_data as $key => $data)
-				if(!array_key_exists($key, $plugins_default_data))
-					unset($plugins_custom_data[$key]);
+
+		//remove details for plugins that do not exists
+		foreach($plugins_custom_data as $plugin_path => $plugin)
+			if(!array_key_exists($plugin_path, $plugins_default_data))
+				unset($plugins_custom_data[$plugin_path]);
 
 		$plugins_orginal = array_replace_recursive($plugins_default_data, $plugins_custom_data);
 
