@@ -4,6 +4,9 @@ Lead developer: Maniu
 
 == Changelog ==
 
+= 1.0.4 =
+* Fixed remaining styling issue for images
+
 = 1.0.3 =
 * Added compatibility with WordPress 3.9
 

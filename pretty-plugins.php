@@ -3,7 +3,7 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1.0.3
+Version: 1.0.4
 Network: true
 Text Domain: wmd_prettyplugins
 Author: WPMUDEV
@@ -281,7 +281,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 		//register scripts and styles for plugin page
 		if( $hook == 'toplevel_page_pretty-plugins' ) {
-			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'style.css', array(), '1.1');
+			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'style.css', array(), '2');
 			wp_enqueue_style('wmd-prettyplugins-theme');
 
 			wp_register_script('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'theme.js', array('jquery'), false, true);
