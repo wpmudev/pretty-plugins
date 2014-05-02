@@ -6,7 +6,7 @@ Description: Give your plugin page the look of an app store, with featured image
 Version: 1.0.4
 Network: true
 Text Domain: wmd_prettyplugins
-Author: WPMUDEV
+Author: WPMU DEV
 Author URI: http://premium.wpmudev.org/
 WDP ID: 852474
 */
