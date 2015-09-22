@@ -25,17 +25,20 @@ jQuery(document).ready(function() {
   });
 
   jQuery('#toplevel_page_pretty-plugins li a').click(function(e) {
-    e.preventDefault();
-
     var filterType = get_url_parameter(jQuery(this).attr('href'));
-    if(typeof filterType['category'] === "undefined")
-      filterType = 'all';
-    else
-      filterType = filterType['category'];
 
-    filter_plugins_cats(filterType);
+    if(filterType['page'] == 'pretty-plugins.php') {
+      e.preventDefault();
 
-    return false;
+      if(typeof filterType['category'] === "undefined")
+        filterType = 'all';
+      else
+        filterType = filterType['category'];
+
+      filter_plugins_cats(filterType);
+
+      return false;
+    }
   });
 
   jQuery('#plugin-status-list li a').click(function(e) {

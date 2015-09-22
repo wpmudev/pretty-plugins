@@ -212,7 +212,7 @@ class WMD_PrettyPlugins_Functions {
 
 			$plugins_custom_data_ready[$path] = array(
 					'path' => $path,
-					'name' => $details['Name'],
+					'name' => stripslashes($details['Name']),
 					'description' => stripslashes($details['Description']),
 					'categories' => $details['Categories'],
 					'custom_url' => $details['CustomLink'],

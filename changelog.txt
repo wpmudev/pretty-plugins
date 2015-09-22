@@ -4,6 +4,11 @@ Lead developer: Maniu
 
 == Changelog ==
 
+= 1.0.5 =
+* Fixed "Edit details" button not being visible in some situations
+* Fixed unstripped slashes in custom plugin title
+* Fixed missing esc_url
+
 = 1.0.4 =
 * Fixed remaining styling issue for images
 

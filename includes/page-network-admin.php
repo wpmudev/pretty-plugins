@@ -150,7 +150,7 @@
 				</th>
 
 				<td>
-					<a href="<?php echo add_query_arg(array('prettyplugins_action' => 'export', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options'))); ?>" class="button"><?php _e('Download Export File', 'wmd_prettyplugins') ?></a>
+					<a href="<?php echo esc_url(add_query_arg(array('prettyplugins_action' => 'export', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options')))); ?>" class="button"><?php _e('Download Export File', 'wmd_prettyplugins') ?></a>
 					<p class="description">
 						<?php _e('Export data and settings for later import or use as a configuration file. You can put exported file named "config.xml" into "wp-content/upload/prettyplugins/" folder to autoload data and settings.', 'wmd_prettyplugins') ?> <small><?php _e('Keep in mind that data from current config file (if exists) will also be exported.', 'wmd_prettyplugins') ?></small>
 					</p>
@@ -175,7 +175,7 @@
 				</th>
 
 				<td>
-					<a onclick="return confirm('<?php _e('Are you sure?', 'wmd_prettyplugins'); ?>')" href="<?php echo add_query_arg(array('prettyplugins_action' => 'delete_custom_data', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options'))); ?>" class="button"><?php _e('Delete all custom plugin data', 'wmd_prettyplugins') ?></a>
+					<a onclick="return confirm('<?php _e('Are you sure?', 'wmd_prettyplugins'); ?>')" href="<?php echo esc_url(add_query_arg(array('prettyplugins_action' => 'delete_custom_data', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options')))); ?>" class="button"><?php _e('Delete all custom plugin data', 'wmd_prettyplugins') ?></a>
 					<p class="description">
 						<?php _e('This action will permanently delete all existing custom plugin data.', 'wmd_prettyplugins') ?></br>
 					</p>

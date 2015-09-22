@@ -3,7 +3,7 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1.0.4
+Version: 1.0.5
 Network: true
 Text Domain: wmd_prettyplugins
 Author: WPMU DEV
@@ -59,7 +59,8 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		//loads dashboard stuff
 		global $wpmudev_notices;
 		$wpmudev_notices[] = array( 'id'=> 852474, 'name'=> 'Pretty Plugins', 'screens' => array( 'toplevel_page_pretty-plugins', 'settings_page_pretty-plugins-network' ) );
-		include_once(PLUGLOOK_PLUGIN_DIR.'external/dash-notice/wpmudev-dash-notification.php');
+		if(file_exists(PLUGLOOK_PLUGIN_DIR.'external/dash-notice/wpmudev-dash-notification.php'))
+			include_once(PLUGLOOK_PLUGIN_DIR.'external/dash-notice/wpmudev-dash-notification.php');
 
 		//plugin only works on admin
 		if(is_admin()) {
@@ -327,7 +328,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				'edit_details_a_title' => __('Edit plugin details like title, discription, image and categories', 'wmd_prettyplugins'),
 				'visit_help' => __('Visit plugin help site', 'wmd_prettyplugins'),
 				'categories' => __('Categories', 'wmd_prettyplugins'),
-				'choose_screenshot' => __('Choose image for plugin screenshot (recommended size: 300px on 225px)', 'wmd_prettyplugins'),
+				'choose_screenshot' => __('Choose image for plugin screenshot (recommended size: 600px on 450px)', 'wmd_prettyplugins'),
 				'select_image' => __('Select Image', 'wmd_prettyplugins'),
 				'edit' => __('Edit', 'wmd_prettyplugins'),
 				'plugin_details' => $plugins_custom_data_ready,
@@ -358,7 +359,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 		add_submenu_page( 'pretty-plugins.php', __('Plugins', 'wmd_prettyplugins'), __('All', 'wmd_prettyplugins'), 'activate_plugins', basename($this->plugin_main_file), array($this,'new_plugin_page') );
 
-		$plugins_categories_ready = $this->get_merged_plugins_categories();
+		$plugins_categories_ready = apply_filters('wmd_prettyplugins_admin_submenu_categories', $this->get_merged_plugins_categories());
 		foreach ($plugins_categories_ready as $plugins_category_key => $plugins_category)
 			add_submenu_page( 'pretty-plugins.php', $plugins_category, $plugins_category, 'activate_plugins', basename($this->plugin_main_file).'&category='.$plugins_category_key, array($this,'new_plugin_page') );
 	}
@@ -418,7 +419,11 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	function network_admin_plugin_action_links($actions, $plugin_file, $plugin_data) {
 		//adds edit details link
 		if(((isset($plugin_data['Network']) && !$plugin_data['Network']) || !isset($plugin_data['Network'])) && (!isset($_GET['plugin_status']) || (isset($_GET['plugin_status']) && $_GET['plugin_status'] != 'mustuse' && $_GET['plugin_status'] != 'dropins')))
-			array_splice($actions, 1, 0, '<a href="#'.$plugin_file.'" title="'.__('Edit plugin details like title, discription, image and categories', 'wmd_prettyplugins').'" class="edit_details">'.__('Edit Details', 'wmd_prettyplugins').'</a>');
+			$actions = array_merge(
+				array_slice($actions,0,1), 
+				array('detials' => '<a href="#'.$plugin_file.'" title="'.__('Edit plugin details like title, discription, image and categories', 'wmd_prettyplugins').'" class="edit_details">'.__('Edit Details', 'wmd_prettyplugins').'</a>'),
+				array_slice($actions,1)
+			);
 
 		//changes edit link to edit code for clarity
 		if(isset($actions['edit']))
@@ -633,7 +638,8 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				$checkout_url = isset($this->pro_site_settings['checkout_url']) ? $this->pro_site_settings['checkout_url'] : '';
 			    if(apply_filters('psts_force_ssl', false))
 			    	$checkout_url = str_replace('http://', 'https://', $checkout_url);
-				$checkout_url = add_query_arg('bid', $this->blog_id, $checkout_url);
+			    $checkout_url_orginal = add_query_arg(array('bid' => $this->blog_id), $checkout_url);
+				$checkout_url = add_query_arg(apply_filters('prettyplugins_checkout_args', array('bid' => $this->blog_id), $plugin_prepare), $checkout_url);
 				$plugin_prepare['ActionLink'] = $checkout_url;
 				$plugin_prepare['ActionLinkClass'] = 'upgrade';
 			}
@@ -659,6 +665,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			else
 				$plugin_prepare['Ribbon'] = '';
 
+			if(isset($plugin_prepare['Name']))
+				$plugin_prepare['Name'] = stripslashes($plugin_prepare['Name']);
+
 			if(isset($plugin_prepare['Description']))
 				$plugin_prepare['Description'] = stripslashes($plugin_prepare['Description']);
 
@@ -681,9 +690,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$plugin_prepare['Actions'] = apply_filters('plugin_action_links', array(), $plugin_path, $plugin_prepare, '');
 			$plugin_prepare['Actions'] = apply_filters("plugin_action_links_$plugin_path", $plugin_prepare['Actions'], $plugin_path, $plugin_prepare, '');
 			//remove link added by prosites because we have better one:)
-			if(isset($checkout_url))
+			if(isset($checkout_url_orginal))
 				foreach($plugin_prepare['Actions'] as $key => $value)
-					if(strpos($value, $checkout_url) !== false)
+					if(strpos($value, $checkout_url_orginal) !== false)
 						unset($plugin_prepare['Actions'][$key]);
 
 			$plugins[$plugin_path] = $plugin_prepare;
