@@ -11,21 +11,21 @@
 		<div class="theme-options plugin-options">
 			<div class="type categories">
 				<span><?php _e('Choose category to display:', 'wmd_prettyplugins'); ?></span>
-				<ul id="plugin-categories-list">
-					<li><a href="#" class="all"><?php _e('All', 'wmd_prettyplugins'); ?></a></li>
-					<?php
-					foreach($plugins_categories as $plugins_category_id => $plugins_category)
-						echo '<li><a href="#" class="'.$plugins_category_id.'">'.$plugins_category.'</a></li>';
-					?>
-				</ul>
+			<ul id="plugin-categories-list">
+				<li><a href="#" class="all"><?php _e('All', 'wmd_prettyplugins'); ?></a></li>
+				<?php
+				foreach($plugins_categories as $plugins_category_id => $plugins_category)
+					echo '<li><a href="#" class="'.$plugins_category_id.'">'.$plugins_category.'</a></li>';
+				?>
+			</ul>
 			</div>
 			<div class="type sort">
-				<span><?php _e('Sort by:', 'wmd_prettyplugins'); ?></span>
-				<ul id="plugin-status-list">
-					<li><a href="#" class="all"><?php _e('All', 'wmd_prettyplugins'); ?></a></li>
-					<li><a href="#" class="active"><?php _e('Active', 'wmd_prettyplugins'); ?></a></li>
-					<li><a href="#" class="inactive"><?php _e('Inactive', 'wmd_prettyplugins'); ?></a></li>
-				</ul>
+			<span><?php _e('Sort by:', 'wmd_prettyplugins'); ?></span>
+			<ul id="plugin-status-list">
+				<li><a href="#" class="all"><?php _e('All', 'wmd_prettyplugins'); ?></a></li>
+				<li><a href="#" class="active"><?php _e('Active', 'wmd_prettyplugins'); ?></a></li>
+				<li><a href="#" class="inactive"><?php _e('Inactive', 'wmd_prettyplugins'); ?></a></li>
+			</ul>
 			</div>
 		</div>
 	</div>

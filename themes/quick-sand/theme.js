@@ -28,16 +28,16 @@ jQuery(document).ready(function() {
     var filterType = get_url_parameter(jQuery(this).attr('href'));
 
     if(filterType['page'] == 'pretty-plugins.php') {
-      e.preventDefault();
+    e.preventDefault();
 
-      if(typeof filterType['category'] === "undefined")
-        filterType = 'all';
-      else
-        filterType = filterType['category'];
+    if(typeof filterType['category'] === "undefined")
+      filterType = 'all';
+    else
+      filterType = filterType['category'];
 
-      filter_plugins_cats(filterType);
+    filter_plugins_cats(filterType);
 
-      return false;
+    return false;
     }
   });
 

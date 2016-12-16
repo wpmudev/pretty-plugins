@@ -1,0 +1,138 @@
+.wp-filter {
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	margin: 12px 0px 25px;
+	padding: 0px 10px;
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	color: #555;
+	font-size: 13px;
+	background: #fff;
+}
+.wp-filter a {
+	text-decoration: none;
+}
+.filter-links {
+	display: inline-block;
+	margin: 0px;
+}
+.filter-links li {
+	display: inline-block;
+	margin: 0px;
+}
+.filter-links li > a {
+	display: inline-block;
+	margin: 0px 10px;
+	padding: 15px 0px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #fff;
+	color: #666;
+	cursor: pointer;
+}
+.filter-links .current,
+.filter-links .current:hover,
+.filter-links .current:focus {
+	box-shadow: none;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	color: #23282d;
+	outline: none;
+}
+.filter-links li > a:hover {
+	color: #00a0d2;
+}
+.plugin-search-holder {
+	margin: 11px 0px;
+	float: right;
+	display: inline-block;
+}
+.plugin-search {
+	font-size: 1.2rem;
+}
+.plugins {
+	color: #000;
+}
+.plugins p {
+	margin: 0px 4px;
+	padding: 0px;
+}
+.plugins .desc p {
+	margin: 0px 0px 8px;
+}
+.plugin-card {
+	float: left;
+	margin: 0px 8px 16px;
+	width: calc(50% - 8px);
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+.plugin-card:nth-child(2n+1) {
+	clear: both;
+	margin-left: 0px;
+}
+.plugin-card:nth-child(2n) {
+	margin-right: 0px;
+}
+.plugin-card-top {
+	position: relative;
+	padding: 20px 20px 10px;
+	min-height: 135px;
+}
+div.action-links,
+.plugin-action-buttons {
+	margin: 0px;
+}
+.plugin-card .name,
+.plugin-card .desc {
+    margin-right: 100px;
+} .plugin-card .action-links {} .plugin-action-buttons {
+	margin-top: 1em;
+	list-style: none;
+}
+.plugin-action-buttons li {
+	margin-bottom: 10px;
+}
+.plugin-icon {
+	max-width: 90px;
+	position: absolute;
+	right: 20px;
+	height: auto;
+}
+.plugin-icon img {
+	max-width: 100%;
+	height: auto;
+}
+.plugin-card-top {
+	min-height: 180px;
+}
+.plugin-card .plugin-card-top:hover {} .plugin-activate .plugin-card-top {} .show-more-button {
+	display: none;
+}
+.plugin-show-more .show-more-button {
+	display: inline;
+}
+.column-description p {
+	line-height: 1.5em;
+}
+.plugin-show-more .column-description p {
+	height: 6em;
+	position: relative;
+	overflow: hidden;
+}
+.plugin-show-more .column-description p::after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 70%;
+	height: 1.5em;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 50%);
+}
+.wmd-plugins-showcase .clear {
+	clear: both;
+}

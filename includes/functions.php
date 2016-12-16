@@ -40,8 +40,6 @@ class WMD_PrettyPlugins_Functions {
     		);
     	if(is_dir($themes_dirs_paths['standard']))
 			$themes_dirs['standard'] = scandir($themes_dirs_paths['standard']);
-		if(is_dir($themes_dirs_paths['custom']))
-			$themes_dirs['custom'] = scandir($themes_dirs_paths['custom']);
 
 		foreach ($themes_dirs as $type => $themes_dir)
 			foreach ($themes_dir as $theme_dir) {
@@ -50,8 +48,8 @@ class WMD_PrettyPlugins_Functions {
 				    if (is_dir($themes_dirs_paths[$type].'/'.$theme_dir))
 				        if(file_exists($themes_dirs_paths[$type].'/'.$theme_dir.'/index.php')) {
 				        	$theme_dir_name = ucwords(str_replace('-', ' ', $theme_dir));
-				        	$type_name = ($type == 'custom') ? __( 'Custom', 'wmd_prettyplugins' ) : __( 'Standard', 'wmd_prettyplugins' );
-				        	$themes[$type.'/'.$theme_dir] = $theme_dir_name.' ('.$type_name.')';
+				        	$type_name = ($type == 'custom') ? __( ' (Custom)', 'wmd_prettyplugins' ) : '';
+				        	$themes[$type.'/'.$theme_dir] = $theme_dir_name.$type_name;
 				    	}
 			}
 
@@ -85,17 +83,23 @@ class WMD_PrettyPlugins_Functions {
 		elseif(empty($screenshot_value) && $this->options['plugins_auto_screenshots'] && file_exists(plugin_dir_path(WP_PLUGIN_DIR.'/'.$plugin_path).'screenshot-1.png'))
 			$screenshot_value = plugins_url('screenshot-1.png', $plugin_path);
 		elseif($get_default && (empty($screenshot_value) || (!empty($screenshot_value) && count(explode('/', $screenshot_value)) == 1 && !file_exists($this->plugin_dir_custom.'screenshots/'.$screenshot_value)))) {
-			global $wp_version;
-			if($wp_version < 3.8 && $this->current_theme_details['type'] == 'standard' )
-				$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot_classic.png';
-			else
-				$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot.png';
+			if($this->options['plugins_auto_screenshots_wp']) {
+				$plugin_path_parts = explode("/", $plugin_path);
+				$screenshot_value = '//ps.w.org/'.$plugin_path_parts[0].'/assets/icon-128x128.png';
+			}
+			else {
+				global $wp_version;
+				if($wp_version < 3.8 && $this->current_theme_details['type'] == 'standard' )
+					$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot_classic.png';
+				else
+					$screenshot_value = $this->current_theme_details['dir_url'].'images/default_screenshot.png';
+			}
 		}
 
     	return (is_ssl()) ? str_replace('http://', 'https://', $screenshot_value) : $screenshot_value;
     }
 
-	function get_resized_attachment_url($attachment_id, $width = '600', $height = '450', $crop = true, $suffix = "-plugin-screenshot") {
+	function get_resized_attachment_url($attachment_id, $width = '600', $height = '600', $crop = true, $suffix = "-plugin-screenshot") {
 		$attachment_url = wp_get_attachment_url($attachment_id);
 		if($attachment_url) {
 			$attachment_meta = wp_get_attachment_metadata($attachment_id);
@@ -134,7 +138,7 @@ class WMD_PrettyPlugins_Functions {
 		if(!isset($this->plugins_categories_config) || !is_array($this->plugins_categories_config))
 			$this->plugins_categories_config = array();
 		if(!isset($this->plugins_categories) || !is_array($this->plugins_categories))
-			$this->plugins_custom_data = array();
+			$this->plugins_categories = array();
 
 		$categories = array_merge($this->plugins_categories_config, $this->plugins_categories);
 		asort($categories);
@@ -155,7 +159,7 @@ class WMD_PrettyPlugins_Functions {
 			$categories = (isset($this->plugins_custom_data[$path]['Categories']) && is_array($this->plugins_custom_data[$path]['Categories'])) ? $this->plugins_custom_data[$path]['Categories'] : array();
 			$config_categories = (isset($this->plugins_custom_data_config[$path]['Categories'])) ? $this->plugins_custom_data_config[$path]['Categories'] : array();
 			if(count($categories) || count($config_categories))
-				$plugins[$path]['Categories'] = array_merge($categories, $config_categories);
+			$plugins[$path]['Categories'] = array_merge($categories, $config_categories);
 		}
 
 		ksort($plugins);
@@ -186,7 +190,7 @@ class WMD_PrettyPlugins_Functions {
 			else
 				$this->options['theme'] = 'standard/quick-sand';
 
-			$standard_options = array('plugins_link_label' => 'strip_tags', 'plugins_page_title' => 'strip_tags', 'plugins_page_description' => '', 'plugins_auto_screenshots' => '', 'setup_mode' => '', 'plugins_hide_descriptions' => '', 'plugins_auto_screenshots_by_name' => '');
+			$standard_options = array('plugins_link_label' => 'strip_tags', 'plugins_page_title' => 'strip_tags', 'plugins_page_description' => '', 'plugins_auto_screenshots' => '', 'plugins_auto_screenshots_wp' => '', 'setup_mode' => '', 'plugins_hide_descriptions' => '', 'plugins_auto_screenshots_by_name' => '');
 			foreach ($standard_options as $option => $action) {
 				if(isset($input[$option])) {
 					if($action == 'strip_tags')
@@ -212,7 +216,7 @@ class WMD_PrettyPlugins_Functions {
 
 			$plugins_custom_data_ready[$path] = array(
 					'path' => $path,
-					'name' => stripslashes($details['Name']),
+					'name' => $details['Name'],
 					'description' => stripslashes($details['Description']),
 					'categories' => $details['Categories'],
 					'custom_url' => $details['CustomLink'],
@@ -468,8 +472,10 @@ class WMD_PrettyPlugins_Functions {
 
 	function prosite_plugin_available($plugin_file) {
 		$psts_plugins = $this->pro_site_settings['pp_plugins'];
+
 		if(isset($psts_plugins[$plugin_file]['level']) && $psts_plugins[$plugin_file]['level'] != 0 && is_numeric($psts_plugins[$plugin_file]['level']) && !is_super_admin())
-			if((function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level'])))
+			if((function_exists('is_pro_site') && is_pro_site($this->blog_id, $psts_plugins[$plugin_file]['level'])) ||
+				(function_exists('psts_show_ads') && !psts_show_ads($this->blog_id)))
 				return true;
 			else
 				return false;
@@ -500,14 +506,14 @@ if (!function_exists('array_replace_recursive')) {
 	        foreach ($array as $key => $value) {
 	            if (is_array($value)) {
 	                $original[$key] = array_replace_recursive($original[$key], $array[$key]);
-	            }
+        }
 
 	            else {
 	                $original[$key] = $value;
-	            }
-	        }
+      }
+    }
 	    }
 
 	    return $original;
-	}
+  }
 }

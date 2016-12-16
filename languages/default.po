@@ -1,360 +1,42 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PrettyPlugins\n"
-"POT-Creation-Date: 2015-09-22 12:16+0100\n"
-"PO-Revision-Date: 2015-09-22 12:16+0100\n"
+"POT-Creation-Date: 2013-11-15 08:48+0100\n"
+"PO-Revision-Date: 2013-11-15 08:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: Incsub\n"
-"Language: en\n"
+"Language: English\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: C:\\Programs Portable\\EasyPHP\\data\\localweb\\wordpress-"
-"incsub\\wp-content\\plugins\\pretty-plugins\n"
+"X-Poedit-Basepath: C:\\Programs Portable\\xampp\\htdocs\\wordpress-incsub"
+"\\wp-content\\plugins\\pretty-plugins\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: C:\\Programs Portable\\EasyPHP\\data\\localweb"
-"\\wordpress-incsub\\wp-content\\plugins\\pretty-plugins\n"
+"X-Poedit-SearchPath-0: C:\\Programs Portable\\xampp\\htdocs\\wordpress-incsub"
+"\\wp-content\\plugins\\pretty-plugins\n"
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/external/wpmudev-help-tooltips.php:296
-msgid "Help"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:8
-msgid "Edit Plugin Details"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:11
-msgid "Name"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:18
-msgid "Orginal Name"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:25
-msgid "Custom URL"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:30
-msgid "Image URL"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:34
-msgid "Choose Image"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:35
-msgid "Edit Image"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:43
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:330
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:78
-msgid "Categories"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:53
-msgid "edit"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:74
-msgid "New category"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:75
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:82
-msgid "Edit category"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:81
-msgid "Add category"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:81
-msgid "Add"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:82
-msgid "Save"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:83
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:106
-msgid "Cancel"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:94
-msgid "Description"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:98
-msgid "Orginal Description"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:107
-msgid "Update"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/functions.php:53
-msgid "Custom"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/functions.php:53
-msgid "Standard"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:4
-msgid "Pretty Plugins Settings"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:5
-#, php-format
-msgid ""
-"This page lets you control Pretty Plugins. You can configure custom plugin "
-"data for each plugin in <a href=\"%s\">\"Plugins\" network page</a> by "
-"clicking \"Edit details\". Click <a href=\"%s\">here</a> to see how it "
-"currently looks like on the main site."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:12
-msgid "General Settings"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:17
-msgid "Enable Setup Mode"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:24
-msgid ""
-"When set to \"true\", the Pretty Plugins plugin page will be visible only on "
-"the main site. This mode is useful for configuring plugin details before "
-"enabling the Pretty Plugins features on all sites in the network."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:30
-msgid "Select Theme For Plugin Page"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:40
-msgid ""
-"Choose the theme that you want to use to display your plugin page. You can "
-"add your own themes into \"wp-content/upload/prettyplugins/your-theme-/\" "
-"folder. (Tip: duplicate the default theme from \"wp-content/plugins/"
-"prettyplugins/themes/\" to get started.)"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:46
-msgid "Theme and Appearance Settings"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:52
-msgid "Select Where Plugin Link Points To"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:67
-msgid "Auto Load First Screenshot"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:74
-msgid ""
-"If a featured image for a plugin has not been set, the first available "
-"screenshot in the plugin folder will be loaded (example: screenshot-1.png)."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:80
-msgid "Auto Load Screenshot With Correct Name"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:87
-msgid ""
-"If the featured image for a plugin has not been set and there is an image "
-"located in \"wp-content/upload/prettyplugins/screenshots/\" with the correct "
-"name (example: plugin location - \"wp-content/plugins/akismet/akismet.php\", "
-"image file - \"akismet-akismet.png\".), the it will autoload. Only PNG files "
-"will work in this method"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:93
-msgid "Minimize Descriptions"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:100
-msgid ""
-"If \"True\", the plugin \"description\" will be hidden by default and it "
-"will appear after clicking \"descriptions\" link on the plugins page."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:105
-msgid "Labels"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:110
-msgid "Plugin Page Title"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:115
-msgid ""
-"This is what you call the \"Plugins\" menu item. Call it \"Plugins\", \"Apps"
-"\", \"Add-ons\" or whatever you'd like."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:120
-msgid "Plugin Page Description"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:125
-msgid ""
-"This text will be visible at the top of the plugins page. Tell your users "
-"what you have to offer."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:130
-msgid "Custom Link Label"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:135
-msgid ""
-"Add a link to any URL for each plugin. For example, a link to support "
-"documents for the plugin."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:141
-msgid "Save Changes"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:144
-msgid "Export and Import"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:149
-msgid "Export"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:153
-msgid "Download Export File"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:155
-msgid ""
-"Export data and settings for later import or use as a configuration file. "
-"You can put exported file named \"config.xml\" into \"wp-content/upload/"
-"prettyplugins/\" folder to autoload data and settings."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:155
-msgid ""
-"Keep in mind that data from current config file (if exists) will also be "
-"exported."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:162
-msgid "Import:"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:167
-msgid "Upload file and import"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:168
-msgid ""
-"Choose an export file (correctly formatted XML file) to import data and "
-"settings. This action will replace any existing data and settings."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:174
-msgid "Reset:"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:178
-msgid "Are you sure?"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:178
-msgid "Delete all custom plugin data"
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:180
-msgid "This action will permanently delete all existing custom plugin data."
-msgstr ""
-
-#: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:127
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:360
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:104
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:329
 msgid "Plugins"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:128
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:105
 msgid ""
 "Plugins lets you enable additional functionality on your site! Here is a "
 "list of what we have available for you."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:129
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:106
 msgid "Learn more"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:138
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:115
 #, php-format
 msgid ""
 "Pretty Plugins only works in multisite configuration. You can read more "
@@ -362,80 +44,87 @@ msgid ""
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:222
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:199
 msgid ""
 "You do not have sufficient permissions to activate plugins for this site."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:252
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:229
 msgid ""
 "You do not have sufficient permissions to deactivate plugins for this site."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:324
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:299
 msgid "Image"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:325
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:430
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:300
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:395
 msgid "Edit Code"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:326
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:301
 msgid "Show/hide orginal description"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:327
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:424
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:302
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:391
 msgid "Edit Details"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:328
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:424
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:303
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:391
 msgid "Edit plugin details like title, discription, image and categories"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:329
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:304
 msgid "Visit plugin help site"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:331
-msgid "Choose image for plugin screenshot (recommended size: 600px on 450px)"
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:305
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:43
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:78
+msgid "Categories"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:332
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:306
+msgid "Choose image for plugin screenshot (recommended size: 300px on 225px)"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:307
 msgid "Select Image"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:333
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:430
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:308
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:395
 msgid "Edit"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:360
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:15
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:25
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:329
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:15
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:25
 msgid "All"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:373
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:342
 msgid "Editing Plugin Details"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:375
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:344
 #, php-format
 msgid ""
 "You can edit plugin details for each plugin by clicking \"Edit Details\". "
@@ -445,21 +134,21 @@ msgid ""
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:376
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:345
 msgid ""
 "<strong>Name</strong> - Replace the name of the plugin with one of your "
 "choice. Leave blank to use the original name."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:377
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:346
 msgid ""
 "<strong>Custom URL</strong> - Create an external plugin link to any URL of "
 "your choice, for support documentation for example."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:378
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:347
 msgid ""
 "<strong>Image URL</strong> - Set the featured image for this plugin. You can "
 "choose an image from your media gallery or copy the URL of the file located "
@@ -472,56 +161,56 @@ msgid ""
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:379
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:348
 msgid ""
 "<strong>Categories</strong> - Allows you to set categories that the plugin "
 "will be assigned to. Unused categories will be automatically deleted."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:380
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:349
 msgid ""
 "<strong>Description</strong> - Replace the original description of the "
 "plugin with your own. Leave blank to use the original."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:392
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:361
 msgid ""
 "Replace the name of the plugin with one of your choice. Leave blank to use "
 "the original name."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:393
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:362
 msgid ""
 "Create an external plugin link to any URL of your choice, for support "
 "documentation for example."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:394
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:363
 msgid ""
 "Set the featured image for this plugin. Recommended dimensions are 600px on "
 "450px. Use help tab (top right corner) to get info about advanced usage."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:395
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:364
 msgid ""
 "Allows you to set categories that the plugin will be assigned to. Unused "
 "categories will be automatically deleted."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:396
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:365
 msgid ""
 "Replace the original description of the plugin with your own. Leave blank to "
 "use the original."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:401
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:370
 #, php-format
 msgid ""
 "Pretty Plugins is currently in \"Setup Mode\". This reminder will disappear "
@@ -532,7 +221,7 @@ msgid ""
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:408
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:377
 #, php-format
 msgid ""
 "As a Super Admin you can activate any plugins for this site. Please note "
@@ -541,84 +230,84 @@ msgid ""
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:412
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:381
 msgid "Pretty Plugins"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:433
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:398
 msgid "Go to the Pretty Plugins settings page"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:433
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:398
 msgid "Settings"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:445
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:410
 msgid "Successfully saved"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:450
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:415
 msgid "All custom plugin data deleted sucessfully."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:461
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:426
 msgid "There was a problem while uploading file."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:465
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:430
 msgid "Plugins data and settings imported successfully."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:602
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:567
 msgid "You do not have sufficient permissions to manage plugins for this site."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:637
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:602
 #, php-format
 msgid "Upgrade to %s!"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:647
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:611
 msgid "Deactivate"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:652
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:616
 msgid "Activate"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:659
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:26
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:623
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:26
 msgid "Active"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:662
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:626
 msgid "Free"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:664
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:628
 msgid "Pro Only"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:706
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:667
 msgid "You cannot delete an plugin while it is active on the main site."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:708
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:669
 #, php-format
 msgid ""
 "The plugin generated %d characters of <strong>unexpected output</strong> "
@@ -628,58 +317,389 @@ msgid ""
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:710
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:671
 msgid ""
 "plugin could not be activated because it triggered a <strong>fatal error</"
 "strong>."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:721
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:682
 msgid "Plugin <strong>activated</strong>."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:723
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/pretty-plugins.php:684
 msgid "Plugin <strong>deactivated</strong>."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:8
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/external/wpmudev-dash-notification.php:57
+#, php-format
+msgid ""
+"Easily get updates, support, and one-click WPMU DEV plugin/theme "
+"installations right from in your dashboard - <strong><a href=\"%s\" title="
+"\"Install Now &raquo;\">install the free WPMU DEV Dashboard plugin</a></"
+"strong>. &nbsp;&nbsp;&nbsp;<small><a href=\"http://premium.wpmudev.org/wpmu-"
+"dev/update-notifications-plugin-information/\">(find out more)</a></small>"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/external/wpmudev-dash-notification.php:61
+#, php-format
+msgid ""
+"Updates, Support, Premium Plugins, Community - <strong><a href=\"%s\" title="
+"\"Activate Now &raquo;\">activate the WPMU DEV Dashboard plugin now</a></"
+"strong>."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/external/wpmudev-help-tooltips.php:296
+msgid "Help"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:8
+msgid "Edit Plugin Details"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:11
+msgid "Name"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:18
+msgid "Orginal Name"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:25
+msgid "Custom URL"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:30
+msgid "Image URL"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:34
+msgid "Choose Image"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:35
+msgid "Edit Image"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:53
+msgid "edit"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:74
+msgid "New category"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:75
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:82
+msgid "Edit category"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:81
+msgid "Add category"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:81
+msgid "Add"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:82
+msgid "Save"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:83
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:106
+msgid "Cancel"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:94
+msgid "Description"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:98
+msgid "Orginal Description"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/element-edit-plugin-details.php:107
+msgid "Update"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/functions.php:53
+msgid "Custom"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/functions.php:53
+msgid "Standard"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:4
+msgid "Pretty Plugins Settings"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:5
+#, php-format
+msgid ""
+"This page lets you control Pretty Plugins. You can configure custom plugin "
+"data for each plugin in <a href=\"%s\">\"Plugins\" network page</a> by "
+"clicking \"Edit details\". Click <a href=\"%s\">here</a> to see how it "
+"currently looks like on the main site."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:12
+msgid "General Settings"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:17
+msgid "Enable Setup Mode"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:24
+msgid ""
+"When set to \"true\", the Pretty Plugins plugin page will be visible only on "
+"the main site. This mode is useful for configuring plugin details before "
+"enabling the Pretty Plugins features on all sites in the network."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:30
+msgid "Select Theme For Plugin Page"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:40
+msgid ""
+"Choose the theme that you want to use to display your plugin page. You can "
+"add your own themes into \"wp-content/upload/prettyplugins/your-theme-/\" "
+"folder. (Tip: duplicate the default theme from \"wp-content/plugins/"
+"prettyplugins/themes/\" to get started.)"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:46
+msgid "Theme and Appearance Settings"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:52
+msgid "Select Where Plugin Link Points To"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:67
+msgid "Auto Load First Screenshot"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:74
+msgid ""
+"If a featured image for a plugin has not been set, the first available "
+"screenshot in the plugin folder will be loaded (example: screenshot-1.png)."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:80
+msgid "Auto Load Screenshot With Correct Name"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:87
+msgid ""
+"If the featured image for a plugin has not been set and there is an image "
+"located in \"wp-content/upload/prettyplugins/screenshots/\" with the correct "
+"name (example: plugin location - \"wp-content/plugins/akismet/akismet.php\", "
+"image file - \"akismet-akismet.png\".), the it will autoload. Only PNG files "
+"will work in this method"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:93
+msgid "Minimize Descriptions"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:100
+msgid ""
+"If \"True\", the plugin \"description\" will be hidden by default and it "
+"will appear after clicking \"descriptions\" link on the plugins page."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:105
+msgid "Labels"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:110
+msgid "Plugin Page Title"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:115
+msgid ""
+"This is what you call the \"Plugins\" menu item. Call it \"Plugins\", \"Apps"
+"\", \"Add-ons\" or whatever you'd like."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:120
+msgid "Plugin Page Description"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:125
+msgid ""
+"This text will be visible at the top of the plugins page. Tell your users "
+"what you have to offer."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:130
+msgid "Custom Link Label"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:135
+msgid ""
+"Add a link to any URL for each plugin. For example, a link to support "
+"documents for the plugin."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:141
+msgid "Save Changes"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:144
+msgid "Export and Import"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:149
+msgid "Export"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:153
+msgid "Download Export File"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:155
+msgid ""
+"Export data and settings for later import or use as a configuration file. "
+"You can put exported file named \"config.xml\" into \"wp-content/upload/"
+"prettyplugins/\" folder to autoload data and settings."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:155
+msgid ""
+"Keep in mind that data from current config file (if exists) will also be "
+"exported."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:162
+msgid "Import:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:167
+msgid "Upload file and import"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:168
+msgid ""
+"Choose an export file (correctly formatted XML file) to import data and "
+"settings. This action will replace any existing data and settings."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:174
+msgid "Reset:"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:178
+msgid "Are you sure?"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:178
+msgid "Delete all custom plugin data"
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/includes/page-network-admin.php:180
+msgid "This action will permanently delete all existing custom plugin data."
+msgstr ""
+
+#: C:\Programs
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:8
 msgid "Search:"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:9
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:9
 msgid "Start typing to search..."
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:13
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:13
 msgid "Choose category to display:"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:23
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:23
 msgid "Sort by:"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:27
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:27
 msgid "Inactive"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:58
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:58
 msgid "Learn more about the plugin"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:64
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:64
 msgid "Details"
 msgstr ""
 
 #: C:\Programs
-#: Portable\EasyPHP\data\localweb\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:87
+#: Portable\xampp\htdocs\wordpress-incsub\wp-content\plugins\pretty-plugins/themes/quick-sand/index.php:87
 msgid "No plugins found."
 msgstr ""

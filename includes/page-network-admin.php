@@ -84,7 +84,20 @@
 					<select name="wmd_prettyplugins_options[plugins_auto_screenshots_by_name]">
 						<?php $this->the_select_options(array(), $this->options['plugins_auto_screenshots_by_name']); ?>
 					</select>
-					<p class="description"><?php _e('If the featured image for a plugin has not been set and there is an image located in "wp-content/upload/prettyplugins/screenshots/" with the correct name (example: plugin location - "wp-content/plugins/akismet/akismet.php", image file - "akismet-akismet.png".), the it will autoload. Only PNG files will work in this method', 'wmd_prettyplugins') ?></p>
+					<p class="description"><?php _e('If the featured image for a plugin has not been set and there is an image located in "wp-content/upload/prettyplugins/screenshots/" with the correct name (example: plugin location - "wp-content/plugins/akismet/akismet.php", image file - "akismet-akismet.png".), it will autoload. Only PNG files will work in this method', 'wmd_prettyplugins') ?></p>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row">
+					<label for="wmd_prettyplugins_options[plugins_auto_screenshots_wp]"><?php _e('Auto Load WP.org image', 'wmd_prettyplugins') ?></label>
+				</th>
+
+				<td>
+					<select name="wmd_prettyplugins_options[plugins_auto_screenshots_wp]">
+						<?php $this->the_select_options(array(), $this->options['plugins_auto_screenshots_wp']); ?>
+					</select>
+					<p class="description"><?php _e('If a featured image for a plugin has not been set, image from wordpress.org plugin directory will be loaded. It is not guaranteed that image will be found.', 'wmd_prettyplugins') ?></p>
 				</td>
 			</tr>
 
@@ -97,7 +110,7 @@
 					<select name="wmd_prettyplugins_options[plugins_hide_descriptions]">
 						<?php $this->the_select_options(array(), $this->options['plugins_hide_descriptions']); ?>
 					</select>
-					<p class="description"><?php _e('If "True", the plugin "description" will be hidden by default and it will appear after clicking "descriptions" link on the plugins page.', 'wmd_prettyplugins') ?></p>
+					<p class="description"><?php _e('If "True", the plugin "description" will be hidden by default and it will appear after clicking "descriptions" link on the plugins page. Theme needs to support this', 'wmd_prettyplugins') ?></p>
 				</td>
 			</tr>
 		</table>
@@ -150,7 +163,7 @@
 				</th>
 
 				<td>
-					<a href="<?php echo esc_url(add_query_arg(array('prettyplugins_action' => 'export', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options')))); ?>" class="button"><?php _e('Download Export File', 'wmd_prettyplugins') ?></a>
+					<a href="<?php echo add_query_arg(array('prettyplugins_action' => 'export', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options'))); ?>" class="button"><?php _e('Download Export File', 'wmd_prettyplugins') ?></a>
 					<p class="description">
 						<?php _e('Export data and settings for later import or use as a configuration file. You can put exported file named "config.xml" into "wp-content/upload/prettyplugins/" folder to autoload data and settings.', 'wmd_prettyplugins') ?> <small><?php _e('Keep in mind that data from current config file (if exists) will also be exported.', 'wmd_prettyplugins') ?></small>
 					</p>
@@ -175,7 +188,7 @@
 				</th>
 
 				<td>
-					<a onclick="return confirm('<?php _e('Are you sure?', 'wmd_prettyplugins'); ?>')" href="<?php echo esc_url(add_query_arg(array('prettyplugins_action' => 'delete_custom_data', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options')))); ?>" class="button"><?php _e('Delete all custom plugin data', 'wmd_prettyplugins') ?></a>
+					<a onclick="return confirm('<?php _e('Are you sure?', 'wmd_prettyplugins'); ?>')" href="<?php echo add_query_arg(array('prettyplugins_action' => 'delete_custom_data', '_wpnonce' => wp_create_nonce('wmd_prettyplugins_options'))); ?>" class="button"><?php _e('Delete all custom plugin data', 'wmd_prettyplugins') ?></a>
 					<p class="description">
 						<?php _e('This action will permanently delete all existing custom plugin data.', 'wmd_prettyplugins') ?></br>
 					</p>

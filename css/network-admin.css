@@ -28,3 +28,7 @@ table.plugins {
 .inline-edit-row fieldset label textarea.plugin_description {
 	height: 6.5em;
 }
+table.plugins .inline-edit-row .spinner {
+	visibility: visible;
+	display: none;
+}
