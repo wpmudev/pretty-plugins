@@ -54,7 +54,7 @@
 
 				<td>
 					<?php
-					$select_options = array( 'plugin_url' => 'Plugin orginal URL', 'plugin_cutom_url' => 'Plugin custom URL', 'plugin_url_or_cutom_url' => 'Plugin custom URL or if cutom does not exists, orginal URL', 'disable' => 'Disable' );
+					$select_options = array( 'plugin_url' => 'Plugin orginal URL', 'plugin_cutom_url' => 'Plugin custom URL', 'plugin_url_or_cutom_url' => 'Plugin custom URL or if custom does not exists, orginal URL', 'disable' => 'Disable' );
 					?>
 					<select name="wmd_prettyplugins_options[plugins_links]">
 						<?php $this->the_select_options($select_options, $this->options['plugins_links']); ?>
