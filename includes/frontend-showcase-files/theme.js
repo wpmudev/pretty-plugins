@@ -197,22 +197,26 @@ plugins.Collection = Backbone.Collection.extend({
   // Performs a search within the collection
   // @uses RegExp
   search: function( term ) {
-    var match, results, haystack;
+    var match, results, haystack, name, description;
 
     // Start with a full collection
     this.reset( plugins.data.plugins, { silent: true } );
 
-    // The RegExp object to match
-    //
+    // Escape the term string for RegExp meta characters
+    term = term.replace( /[-\/\\^$*+?.()|[\]{}]/g, '\\$&' );
+
     // Consider spaces as word delimiters and match the whole string
     // so matching terms can be combined
-    term = term.replace( ' ', ')(?=.*' );
+    term = term.replace( / /g, ')(?=.*' );
     match = new RegExp( '^(?=.*' + term + ').+', 'i' );
 
     // Find results
     // _.filter and .test
     results = this.filter( function( data ) {
-      haystack = _.union( data.get( 'Name' ), data.get( 'Description' ) );
+      name        = data.get( 'Name' ).replace( /(<([^>]+)>)/ig, '' );
+      description = data.get( 'Description' ).replace( /(<([^>]+)>)/ig, '' );
+
+      haystack = _.union( [ name, description ] );
 
       return match.test( haystack );
     });

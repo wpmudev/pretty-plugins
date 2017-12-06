@@ -4,6 +4,15 @@ Lead developer: Maniu
 
 == Changelog ==
 
+= 1.5.4 =
+* Fixed compatibility with Pro Sites
+
+= 1.5.3 =
+* Fixed plugin searching issues in network admin panel
+
+= 1.5.2 =
+* Fixed plugin searching issues in 3 Eight theme
+
 = 1.5.1 =
 * Improved frontend plugins showcase
 * decreased WP.org images size for better results

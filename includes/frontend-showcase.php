@@ -19,7 +19,7 @@ class WMD_PrettyPluginsFEShowcase extends WMD_PrettyPlugins_Functions {
 		$this->plugin->set_custom_plugin_data();
 
 		wp_enqueue_style('wmd-prettyplugins-fe-theme', $this->plugin->plugin_dir_url.'includes/frontend-showcase-files/style.css', array(), 6);
-		wp_enqueue_script('wmd-prettyplugins-fe-theme', $this->plugin->plugin_dir_url.'includes/frontend-showcase-files/theme.js', array('jquery', 'backbone', 'wp-backbone'), 6);
+		wp_enqueue_script('wmd-prettyplugins-fe-theme', $this->plugin->plugin_dir_url.'includes/frontend-showcase-files/theme.js', array('jquery', 'backbone', 'wp-backbone'), 7);
 
 		if($atts['plugins']) {
 			$plugins = explode(',', str_replace(' ', '' , $atts['plugins']));

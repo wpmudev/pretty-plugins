@@ -3,7 +3,7 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1.5.1
+Version: 1.5.4
 Network: true
 Text Domain: wmd_prettyplugins
 Author: WPMU DEV
@@ -165,15 +165,15 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		//load stuff when on correct page
 		if($this->is_prettyplugin_data_required()) {
 			$this->set_custom_plugin_data();
+		}
 
-			//Check if prosite and plugin module is active
-			$this->pro_site_settings = get_site_option( 'psts_settings' );
-			if(function_exists('is_pro_site') && isset($this->pro_site_settings['modules_enabled']) && in_array('ProSites_Module_Plugins', $this->pro_site_settings['modules_enabled']))
-				$this->pro_site_plugin_active = true;
-			else {
-				$this->pro_site_plugin_active = false;
-				$this->pro_site_settings = false;
-			}
+		//Check if prosite and plugin module is active
+		$this->pro_site_settings = get_site_option( 'psts_settings' );
+		if(function_exists('is_pro_site') && isset($this->pro_site_settings['modules_enabled']) && in_array('ProSites_Module_Plugins', $this->pro_site_settings['modules_enabled']))
+			$this->pro_site_plugin_active = true;
+		else {
+			$this->pro_site_plugin_active = false;
+			$this->pro_site_settings = false;
 		}
 
 		//controlls welcome/setup notice
@@ -275,7 +275,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		if($this->pro_site_plugin_active) {
 			global $plugin_page;
 			if ( isset($plugin_page) && $plugin_page == 'pretty-premium-plugins' )
-				wp_redirect( admin_url('admin.php?page=pretty-plugins.php') );
+				wp_redirect( admin_url('admin.php?page=pretty-plugins.php&category=premium') );
 		}
 	}
 
@@ -287,7 +287,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			wp_register_style('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'style.css', array(), '7');
 			wp_enqueue_style('wmd-prettyplugins-theme');
 
-			wp_register_script('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'theme.js', array('jquery', 'backbone', 'wp-backbone'), '7', true);
+			wp_register_script('wmd-prettyplugins-theme', $this->current_theme_details['dir_url'].'theme.js', array('jquery', 'backbone', 'wp-backbone'), '9', true);
 			wp_enqueue_script('wmd-prettyplugins-theme');
 
 			//used on old theme only?
@@ -448,9 +448,14 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 					$plugin_prepare['ShowMore'] = true;
 			}
 
-			if(isset($plugin_prepare['Categories']) && count($plugin_prepare['Categories']) > 0)
+			if(isset($plugin_prepare['Categories']) && count($plugin_prepare['Categories']) > 0) {
 				foreach ($plugin_prepare['Categories'] as $plugin_category_key)
 					$plugin_prepare['CategoriesNames'][] = $plugins_categories[$plugin_category_key];
+			}
+
+			if($plugin_prepare['ActionLinkClass'] == 'upgrade') {
+				$plugin_prepare['Categories'][] = 'premium';
+			}
 
 			//Set up Plugin Link according to options settings
 			if($this->options['plugins_links'] == 'plugin_url' && isset($plugin_prepare['PluginURI']) && !empty($plugin_prepare['PluginURI']))
