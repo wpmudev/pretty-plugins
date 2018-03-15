@@ -72,7 +72,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			register_activation_hook($this->plugin_main_file, array($this, 'do_activation'));
 
 			//if in setup mode, disable everything for other sites then main.
-			if( isset($this->options['setup_mode']) && ($this->options['setup_mode'] == 0 || ($this->blog_id == 1 && $this->options['setup_mode'] == 1)) ) {
+			if( 
+				(isset($this->options['setup_mode']) && $this->options['setup_mode'] == 0) || $this->blog_id == 1
+			) {
 				add_action('plugins_loaded', array($this,'plugins_loaded'));
 
 				add_action('admin_enqueue_scripts', array($this,'register_scripts_styles_admin'));

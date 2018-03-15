@@ -6,6 +6,9 @@ Lead developer: Maniu
 
 = 1.5.4 =
 * Fixed compatibility with Pro Sites
+* Typo fixed
+* Fixed upload folder not working
+* Fixed possibility of network menu not being visible
 
 = 1.5.3 =
 * Fixed plugin searching issues in network admin panel
