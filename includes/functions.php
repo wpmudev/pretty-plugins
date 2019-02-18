@@ -167,6 +167,22 @@ class WMD_PrettyPlugins_Functions {
 		return $plugins;
 	}
 
+	function get_merged_plugins_all_data($plugins = false) {
+		if(!function_exists('get_plugins'))
+			require_once ABSPATH.'wp-admin/includes/plugin.php';
+		$plugins_default_data = $plugins ? get_plugins() : apply_filters('all_plugins', get_plugins());
+		$plugins_custom_data = $this->get_merged_plugins_custom_data();
+
+		//remove details for plugins that do not exists
+		foreach($plugins_custom_data as $plugin_path => $plugin)
+			if(!array_key_exists($plugin_path, $plugins_default_data))
+				unset($plugins_custom_data[$plugin_path]);
+
+		$plugins_all_data = array_replace_recursive($plugins_default_data, $plugins_custom_data);
+
+		return $plugins_all_data;
+	}
+
 	function get_last_category_id() {
 		if($this->plugins_categories) {
 			end($this->plugins_categories);

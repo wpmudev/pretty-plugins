@@ -1,5 +1,4 @@
 <div class="wrap">
-	<?php screen_icon('plugins'); ?>
 	<h2><?php echo stripslashes($this->options['plugins_page_title']); ?></h2>
 	<p><?php echo stripslashes($this->options['plugins_page_description']); ?></p>
 

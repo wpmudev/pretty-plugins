@@ -3,7 +3,7 @@
 Plugin Name: Pretty Plugins
 Plugin URI: http://premium.wpmudev.org/project/pretty-plugins/
 Description: Give your plugin page the look of an app store, with featured images, categories, and amazing search.
-Version: 1.5.4
+Version: 1.5.5
 Network: true
 Text Domain: wmd_prettyplugins
 Author: WPMU DEV
@@ -72,9 +72,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			register_activation_hook($this->plugin_main_file, array($this, 'do_activation'));
 
 			//if in setup mode, disable everything for other sites then main.
-			if( 
-				(isset($this->options['setup_mode']) && $this->options['setup_mode'] == 0) || $this->blog_id == 1
-			) {
+			if( isset($this->options['setup_mode']) && ($this->options['setup_mode'] == 0 || ($this->blog_id == 1 && $this->options['setup_mode'] == 1)) ) {
 				add_action('plugins_loaded', array($this,'plugins_loaded'));
 
 				add_action('admin_enqueue_scripts', array($this,'register_scripts_styles_admin'));
@@ -88,12 +86,15 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				add_action( 'network_admin_notices', array($this,'options_page_validate_save_notices') );
 				add_action( 'all_admin_notices', array($this,'plugin_page_notice'), 11 );
 				add_filter('network_admin_plugin_action_links', array($this,'network_admin_plugin_action_links'), 10, 3);
+				add_filter('all_plugins', array($this,'network_filter_all_plugins'));
 
 				add_action('admin_footer-plugins.php', array($this,'prettyplugins_edit_html'));
 
 				add_action('wp_ajax_prettyplugins_add_category_ajax', array($this,'add_category_ajax'));
 				add_action('wp_ajax_prettyplugins_save_category_ajax', array($this,'save_category_ajax'));
 				add_action('wp_ajax_prettyplugins_save_plugin_details_ajax', array($this,'save_plugin_details_ajax'));
+
+				
 			}
 		}
 	}
@@ -167,7 +168,6 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		//load stuff when on correct page
 		if($this->is_prettyplugin_data_required()) {
 			$this->set_custom_plugin_data();
-		}
 
 		//Check if prosite and plugin module is active
 		$this->pro_site_settings = get_site_option( 'psts_settings' );
@@ -176,6 +176,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		else {
 			$this->pro_site_plugin_active = false;
 			$this->pro_site_settings = false;
+		}
 		}
 
 		//controlls welcome/setup notice
@@ -311,7 +312,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			wp_register_style('wmd-prettyplugins-network-admin', $this->plugin_dir_url.'css/network-admin.css', array(), 2);
 			wp_enqueue_style('wmd-prettyplugins-network-admin');
 
-			wp_register_script('wmd-prettyplugins-network-admin', $this->plugin_dir_url.'js/network-admin.js', false, true);
+			wp_register_script('wmd-prettyplugins-network-admin', $this->plugin_dir_url.'js/network-admin.js', array(), 3);
 			wp_enqueue_script('wmd-prettyplugins-network-admin');
 
 			$network_only_plugins = array();
@@ -344,7 +345,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				'edit' => __('Edit', 'wmd_prettyplugins'),
 				'plugin_details' => $plugins_custom_data_ready,
 				'plugin_categories' => $plugins_categories_ready,
-				'network_only_plugins' => $network_only_plugins
+				'network_only_plugins' => $network_only_plugins,
+				'filter_by' => __('Filter By Category', 'wmd_prettyplugins'),
+				'current_category' => (isset($_REQUEST['category']) ? $_REQUEST['category'] : '')
 			);
 			wp_localize_script( 'wmd-prettyplugins-network-admin', 'wmd_pl_na', $params );
 
@@ -364,17 +367,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			
 		$plugins_categories = $this->get_merged_plugins_categories();
 
-		if(!function_exists('get_plugins'))
-			require_once ABSPATH.'wp-admin/includes/plugin.php';
-		$plugins_default_data = $plugins ? get_plugins() : apply_filters('all_plugins', get_plugins());
-		$plugins_custom_data = $this->get_merged_plugins_custom_data();
-
-		//remove details for plugins that do not exists
-		foreach($plugins_custom_data as $plugin_path => $plugin)
-			if(!array_key_exists($plugin_path, $plugins_default_data))
-				unset($plugins_custom_data[$plugin_path]);
-
-		$plugins_orginal = array_replace_recursive($plugins_default_data, $plugins_custom_data);
+		$plugins_orginal = $this->get_merged_plugins_all_data($plugins);
 
 		$count = 0;
 		$this->plugins_data = array(); //this is being set globally because it later can be reused by themes that need variable
@@ -596,6 +589,26 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$actions['settings'] = '<a href="'.admin_url('network/settings.php?page=pretty-plugins.php').'" title="'.__('Go to the Pretty Plugins settings page', 'wmd_prettyplugins').'">'.__('Settings', 'wmd_prettyplugins').'</a>';
 
 		return $actions;
+	}
+
+	function network_filter_all_plugins($plugins) {
+		if(is_network_admin() && $plugins && isset($_REQUEST['category']) && $_REQUEST['category']) {
+
+			$category = $_REQUEST['category'];
+			
+			$plugins_custom_data = $this->get_merged_plugins_custom_data();
+
+			$category_plugins = array();
+			foreach($plugins_custom_data as $plugin_custom_data_slug => $plugin_custom_data_data) {
+				if(!isset($plugin_custom_data_data['Categories']) || !in_array($category, $plugin_custom_data_data['Categories'])) {
+					unset($plugins_custom_data[$plugin_custom_data_slug]);
+				}
+			}
+
+			$plugins = array_intersect_key($plugins, $plugins_custom_data);
+		}
+
+		return $plugins;
 	}
 
 	function options_page_validate_save_notices() {

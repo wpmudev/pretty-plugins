@@ -4,6 +4,10 @@ Lead developer: Maniu
 
 == Changelog ==
 
+= 1.5.5 =
+* Removed "screen_icon" function usage
+* Added ability to filter plugins by category in network admin area
+
 = 1.5.4 =
 * Fixed compatibility with Pro Sites
 * Typo fixed
@@ -27,9 +31,12 @@ Lead developer: Maniu
 * Added frontend plugins showcase through shortcode (beta): [wmd-plugins-showcase category="{optional - default theme category to display}" plugins="{optional - show selected plugins}"]
 * Fixed WP 4.6 compatibility issues
 
-= 1.0.5 =
-* Fixed "Edit details" button not being visible in some situations
-* Fixed unstripped slashes in custom plugin title
+= 1.0.5 =
+
+* Fixed "Edit details" button not being visible in some situations
+
+* Fixed unstripped slashes in custom plugin title
+
 * Fixed missing esc_url
 
 = 1.0.4 =

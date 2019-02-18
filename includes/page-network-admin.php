@@ -1,6 +1,4 @@
 <div class="wrap">
-
-	<?php screen_icon('tools'); ?>
 	<h2><?php _e('Pretty Plugins Settings', 'wmd_prettyplugins') ?></h2>
 	<p><?php printf(__('This page lets you control Pretty Plugins. You can configure custom plugin data for each plugin in <a href="%s">"Plugins" network page</a> by clicking "Edit details". Click <a href="%s">here</a> to see how it currently looks like on the main site.', 'wmd_prettyplugins'), admin_url('network/plugins.php'), admin_url('admin.php?page=pretty-plugins.php')) ?></p>
 	<form action="settings.php?page=pretty-plugins.php" method="post" enctype="multipart/form-data">

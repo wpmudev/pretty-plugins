@@ -14,6 +14,36 @@ jQuery(document).ready(function() {
 		});
 	}
 
+	//handle filtering by category
+	jQuery('.subsubsub li:last-child').append(' |');
+	jQuery('.subsubsub').append('<li class="pl-categories"><select><option>'+wmd_pl_na.filter_by+'</option></select></li>');
+	jQuery.each(wmd_pl_na.plugin_categories, function( index, value ) {
+		/*
+		if(index.indexOf('config') == 0){
+			value = value+' (Config)';
+		}
+		*/
+		var selected = '';
+		if(wmd_pl_na.current_category == index) {
+			selected = ' selected'
+		}
+		jQuery('.pl-categories select').append('<option value="'+index+'"'+selected+'>'+value+'</option>');
+	});
+	jQuery('.subsubsub').on('change', '.pl-categories select', function() {
+		var value = jQuery(this).find(':selected').val();
+		if(value) {
+			var url = window.location.href;
+			if(url.indexOf('?') != '-1') {
+				url = url+'&category='+value;
+			}
+			else {
+				url = url+'?category='+value;
+			}
+
+			window.location.href = url;
+		}
+	});
+
 	//get edit plugin details screen on click
 	holder.on( 'click', 'a.edit_details', function(event) {
 		event.preventDefault();
